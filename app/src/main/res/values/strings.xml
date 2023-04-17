@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Proyecto_Final_Moviles_1</string>
+    <string name="create_acct"> Por favor introduzca un correo y contraseña validos de almenos 6 carácteres</string>
+</resources>
