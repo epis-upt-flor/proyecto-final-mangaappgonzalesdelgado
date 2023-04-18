@@ -23,6 +23,7 @@ class LoginScreenViewModel: ViewModel() {
     val loading: LiveData<Boolean> = _loading
 
 
+    // Login
     fun singInWithEmailAndPassword(email: String, password: String, home: ()-> Unit)
     = viewModelScope.launch{ // lo metemos a un scope para que corra en otra coroutine parqa que no hayan problemas
         try{
@@ -40,6 +41,8 @@ class LoginScreenViewModel: ViewModel() {
         }
     }
 
+
+    // se crea el usuario en account en firebase
     fun createUserWithEmailAndPassword(
         email: String,
         password: String,
@@ -61,13 +64,14 @@ class LoginScreenViewModel: ViewModel() {
         }
     }
 
+    // aqui añadimos al firestore
     private fun createUser(displayName: String?) {
         val userId = auth.currentUser?.uid  // este es basicamente la sesion
         val user = MUser(userId = userId.toString(),
             displayName = displayName.toString(),
             avatarUrl = "",
             quote = "Hola, ¿como estan?",
-            profession = "Otaku",
+            profession = "Alumno Epis",
             id= null).toMap()
 
 

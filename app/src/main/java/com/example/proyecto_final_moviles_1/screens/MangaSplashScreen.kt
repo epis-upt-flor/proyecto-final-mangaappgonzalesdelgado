@@ -45,6 +45,8 @@ fun MangaSplashScreen(navController: NavController){
                 )
         )
         delay(2000L)
+
+
         if(FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty()){ // si ya existe instancia de firebase se salta el login
             navController.navigate(MangaScreens.LoginScreen.name)
         }else {
