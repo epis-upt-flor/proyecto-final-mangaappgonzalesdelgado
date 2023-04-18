@@ -51,7 +51,7 @@ fun MangaSplashScreen(navController: NavController){
             navController.navigate(MangaScreens.MangaHomeScreen.name)
         }
 
-        //navController.navigate(MangaScreens.LoginScreen.name)
+        //navController.navigate(MangaScreens.LoginScreen.name) //cuando necesito ir a login activo esto
 
     }
 
