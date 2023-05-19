@@ -36,7 +36,7 @@ fun Home(navController: NavController = NavController(LocalContext.current)) {
     },
         floatingActionButton = {
             FABContent {
-
+                navController.navigate(MangaScreens.SearchScreen.name)
             }
         }) {
 

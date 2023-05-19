@@ -45,5 +45,7 @@ fun MangaNavigation() {
         composable(MangaScreens.UpdateScreen.name){
             BookUpdateScreen(navController = navController)
         }
+
+
     }
 }

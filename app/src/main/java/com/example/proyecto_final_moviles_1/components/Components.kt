@@ -1,5 +1,6 @@
 package com.example.proyecto_final_moviles_1.components
 
+import android.media.Image
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -21,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
@@ -51,7 +53,6 @@ fun MangaLogo(modifier: Modifier = Modifier) {
 }
 
 
-
 @Composable
 fun EmailInput(
     modifier: Modifier = Modifier,
@@ -60,8 +61,9 @@ fun EmailInput(
     enabled: Boolean = true,
     imeAction: ImeAction = ImeAction.Next, // relacionado al boton
     onAction: KeyboardActions = KeyboardActions.Default
-){
-    InputField(modifier = modifier,
+) {
+    InputField(
+        modifier = modifier,
         valueState = emailState,
         labelId = labelId,
         enabled = enabled,
@@ -88,8 +90,10 @@ fun InputField(
         onValueChange = { valueState.value = it }, // aqui se añade lo que este en el textField
         label = { Text(text = labelId) },
         singleLine = isSingleLine,
-        textStyle = TextStyle(fontSize = 18.sp,
-            color = MaterialTheme.colors.onBackground),
+        textStyle = TextStyle(
+            fontSize = 18.sp,
+            color = MaterialTheme.colors.onBackground
+        ),
         modifier = modifier
             .padding(bottom = 10.dp, start = 10.dp, end = 10.dp)
             .fillMaxWidth(),
@@ -102,7 +106,6 @@ fun InputField(
 }
 
 
-
 @Composable
 fun PasswordInput(
     modifier: Modifier,
@@ -110,16 +113,17 @@ fun PasswordInput(
     labelId: String,
     enabled: Boolean,
     passwordVisibility: MutableState<Boolean>,
-    imeAction: ImeAction=ImeAction.Done,
+    imeAction: ImeAction = ImeAction.Done,
     onAction: KeyboardActions = KeyboardActions.Default
 ) {
 
     val visualTransformation = if (passwordVisibility.value) VisualTransformation.None else
         PasswordVisualTransformation()
-    OutlinedTextField(value = passwordState.value, onValueChange ={
-        passwordState.value = it
-    },
-        label = { Text(text = labelId )},
+    OutlinedTextField(
+        value = passwordState.value, onValueChange = {
+            passwordState.value = it
+        },
+        label = { Text(text = labelId) },
         singleLine = true,
         textStyle = TextStyle(fontSize = 18.sp, color = MaterialTheme.colors.onBackground),
         modifier = modifier
@@ -131,7 +135,7 @@ fun PasswordInput(
             imeAction = imeAction
         ),
         visualTransformation = visualTransformation,
-        trailingIcon = {PasswodVisibility(passwordVisibility = passwordVisibility)},
+        trailingIcon = { PasswodVisibility(passwordVisibility = passwordVisibility) },
         keyboardActions = onAction
     )
 }
@@ -147,16 +151,19 @@ fun PasswodVisibility(passwordVisibility: MutableState<Boolean>) {
 
 @Composable
 fun MangaRating(score: Double = 4.5) {
-    Surface(modifier = Modifier
-        .height(70.dp)
-        .padding(4.dp),
+    Surface(
+        modifier = Modifier
+            .height(70.dp)
+            .padding(4.dp),
         shape = RoundedCornerShape(56.dp),
         elevation = 6.dp,
         /*color = Color.White*/
     ) {
         Column(modifier = Modifier.padding(4.dp)) { // estrella y rating
-            Icon(imageVector = Icons.Filled.StarBorder, contentDescription = "Star",
-                modifier = Modifier.padding(3.dp))
+            Icon(
+                imageVector = Icons.Filled.StarBorder, contentDescription = "Star",
+                modifier = Modifier.padding(3.dp)
+            )
 
             Text(text = score.toString(), style = MaterialTheme.typography.subtitle1)
         }
@@ -166,13 +173,16 @@ fun MangaRating(score: Double = 4.5) {
 }
 
 @Composable
-fun TitleSection(modifier: Modifier = Modifier,
-                 label: String){
+fun TitleSection(
+    modifier: Modifier = Modifier,
+    label: String
+) {
 
     Surface(modifier = modifier.padding(start = 5.dp, top = 1.dp)) {
 
         Column {
-            Text(text = label,
+            Text(
+                text = label,
                 fontSize = 19.sp,
                 fontStyle = FontStyle.Normal,
                 textAlign = TextAlign.Left
@@ -186,17 +196,20 @@ fun TitleSection(modifier: Modifier = Modifier,
 
 @Preview
 @Composable
-fun ListCard(manga: MManga = MManga("asd","hola","Daniel y Jesus", "hola mundo"),
-             onPressDetails: (String) -> Unit = {} // porq queremos pasar un evento clickeable y id y pues toda al info del manga
-){
+fun ListCard(
+    manga: MManga = MManga("asd", "hola", "Daniel y Jesus", "hola mundo"),
+    onPressDetails: (String) -> Unit = {} // porq queremos pasar un evento clickeable y id y pues toda al info del manga
+) {
 
     val context = LocalContext.current
     val resources = context.resources
 
 
-    val displayMetrics = resources.displayMetrics // sacamos la info de lo que esta mostrando la app, en este caso los tamaños de los diferentes objetos
+    val displayMetrics =
+        resources.displayMetrics // sacamos la info de lo que esta mostrando la app, en este caso los tamaños de los diferentes objetos
 
-    val screenWidth = displayMetrics.widthPixels/ displayMetrics.density // va a sacar el tamaño de la pantalla del celu
+    val screenWidth =
+        displayMetrics.widthPixels / displayMetrics.density // va a sacar el tamaño de la pantalla del celu
     val spacing = 10.dp
 
     Card(shape = RoundedCornerShape(29.dp),
@@ -208,12 +221,15 @@ fun ListCard(manga: MManga = MManga("asd","hola","Daniel y Jesus", "hola mundo")
             .width(202.dp)
             .clickable { onPressDetails.invoke(manga.title.toString()) }
     ) {
-        Column(modifier = Modifier.width(screenWidth.dp - (spacing * 2) ),
-            horizontalAlignment = Alignment.Start ){
+        Column(
+            modifier = Modifier.width(screenWidth.dp - (spacing * 2)),
+            horizontalAlignment = Alignment.Start
+        ) {
 
             Row(horizontalArrangement = Arrangement.Center) {
 
-                Image(painter = rememberImagePainter(data = "https://mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/f6cd8dcd-ad53-47bc-9699-fb758c51d9ba.jpg"), // obviamente la imagen pero falta trabajar aqui topdavia
+                Image(
+                    painter = rememberImagePainter(data = "https://mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/f6cd8dcd-ad53-47bc-9699-fb758c51d9ba.jpg"), // obviamente la imagen pero falta trabajar aqui topdavia
                     contentDescription = "Imagen de libro",
                     modifier = Modifier
                         .height(140.dp)
@@ -223,12 +239,14 @@ fun ListCard(manga: MManga = MManga("asd","hola","Daniel y Jesus", "hola mundo")
 
                 Spacer(modifier = Modifier.width(50.dp))
 
-                Column(modifier = Modifier.padding(top = 25.dp),
+                Column(
+                    modifier = Modifier.padding(top = 25.dp),
                     verticalArrangement = Arrangement.Center,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) { // los botonsitos en la imagen
 
-                    Icon(imageVector = Icons.Rounded.FavoriteBorder,
+                    Icon(
+                        imageVector = Icons.Rounded.FavoriteBorder,
                         contentDescription = "Fav Icon/ corazoncito",
                         modifier = Modifier.padding(bottom = 1.dp)
                     )
@@ -239,22 +257,26 @@ fun ListCard(manga: MManga = MManga("asd","hola","Daniel y Jesus", "hola mundo")
                 }
             }
 
-            Text(text = manga.title.toString(), modifier = Modifier.padding(4.dp),
+            Text(
+                text = manga.title.toString(), modifier = Modifier.padding(4.dp),
                 fontWeight = FontWeight.Bold,
                 maxLines = 2,
-                overflow = TextOverflow.Ellipsis)
+                overflow = TextOverflow.Ellipsis
+            )
 
-            Text(text = manga.authors.toString(), modifier = Modifier.padding(4.dp),
-                style = MaterialTheme.typography.caption)
-
+            Text(
+                text = manga.authors.toString(), modifier = Modifier.padding(4.dp),
+                style = MaterialTheme.typography.caption
+            )
 
 
         }
 
         // este el el botoncito celeste fuera del column
-        Row(horizontalArrangement = Arrangement.End,
+        Row(
+            horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.Bottom
-        ){
+        ) {
             RoundedButton(label = "Leyendo", radius = 70)
 
         }
@@ -269,17 +291,22 @@ fun RoundedButton(
     label: String = "Leyendo",
     radius: Int = 29,
     onPress: () -> Unit = {}
-){
-    Surface(modifier = Modifier.clip(RoundedCornerShape(
-        bottomEndPercent = radius,
-        topStartPercent = radius)),
+) {
+    Surface(
+        modifier = Modifier.clip(
+            RoundedCornerShape(
+                bottomEndPercent = radius,
+                topStartPercent = radius
+            )
+        ),
         color = Color(0xFF92CBDF)
     ) {
 
-        Column(modifier = Modifier
-            .width(90.dp)
-            .heightIn(40.dp)
-            .clickable { onPress.invoke() },
+        Column(
+            modifier = Modifier
+                .width(90.dp)
+                .heightIn(40.dp)
+                .clickable { onPress.invoke() },
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -294,60 +321,80 @@ fun RoundedButton(
 @Composable
 fun MangaAppBar(
     title: String,
+    icon: ImageVector? = null,
     showProfile: Boolean = true,
-    navController: NavController
-){
-    TopAppBar(title = {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            if(showProfile){
-                Icon(imageVector = Icons.Default.Favorite,
-                    contentDescription = "Icono del logo",
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(12.dp))
-                        .scale(0.9f)
+    navController: NavController,
+    onBackArrowClicked: () -> Unit = {}
+) {
+    TopAppBar(
+        title = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (showProfile) {
+                    Icon(
+                        imageVector = Icons.Default.Favorite,
+                        contentDescription = "Icono del logo",
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(12.dp))
+                            .scale(0.9f)
+                    )
+
+                }
+                if (icon != null) {
+                    Icon(imageVector = icon, contentDescription = "flecha de retorno",
+                        tint = Color.Red.copy(alpha = 0.7f),
+                        modifier = Modifier.clickable { onBackArrowClicked.invoke() })
+                }
+                Spacer(modifier = Modifier.width(40.dp))
+                Text(
+                    text = title,
+                    color = Color.Red.copy(alpha = 0.7f),
+                    style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp)
                 )
 
+
             }
-            Text(text = title,
-                color = Color.Red.copy(alpha =0.7f),
-                style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp)
-            )
-            Spacer(modifier = Modifier.width(150.dp))
-
-        }
 
 
-    },
+        },
         actions = {
             IconButton(onClick = {
-                FirebaseAuth.getInstance().signOut().run{ // cerrar sesion!!!
+                FirebaseAuth.getInstance().signOut().run { // cerrar sesion!!!
                     navController.navigate(MangaScreens.LoginScreen.name)
                 }
             }) {
-                Icon(imageVector = Icons.Filled.Logout, // icono de cerrar sesion
-                    contentDescription = "Cerrar Sesión"
-                    //tint = Color.Green.copy(alpha = 0.4f)
-                )
+                if(showProfile) Row(){
+                    Icon(
+                        imageVector = Icons.Filled.Logout, // icono de cerrar sesion
+                        contentDescription = "Cerrar Sesión"
+                        //tint = Color.Green.copy(alpha = 0.4f)
+                    )
+                }else Box(){}
+                    
+
+
 
 
             }
         },
         backgroundColor = Color.Transparent,
-        elevation = 0.dp)
+        elevation = 0.dp
+    )
 
 }
 
 
-
-
 @Composable
 fun FABContent(onTap: () -> Unit) {
-    FloatingActionButton(onClick = {onTap()  },
+    FloatingActionButton(
+        onClick = { onTap() },
         shape = RoundedCornerShape(50.dp),
-        backgroundColor = Color(0xff92CBDF)) {
-        Icon(imageVector = Icons.Default.Add,
+        backgroundColor = Color(0xff92CBDF)
+    ) {
+        Icon(
+            imageVector = Icons.Default.Add,
             contentDescription = "Añadir un Manga",
-            tint = MaterialTheme.colors.onSecondary)
+            tint = MaterialTheme.colors.onSecondary
+        )
 
     }
 }
