@@ -1,6 +1,7 @@
 package com.example.proyecto_final_moviles_1.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -8,6 +9,7 @@ import com.example.proyecto_final_moviles_1.screens.MangaSplashScreen
 import com.example.proyecto_final_moviles_1.screens.details.BookDetailsScreen
 import com.example.proyecto_final_moviles_1.screens.home.Home
 import com.example.proyecto_final_moviles_1.screens.login.LoginScreen
+import com.example.proyecto_final_moviles_1.screens.search.MangaSearchViewModel
 import com.example.proyecto_final_moviles_1.screens.search.SearchScreen
 import com.example.proyecto_final_moviles_1.screens.stats.StatsScreen
 import com.example.proyecto_final_moviles_1.screens.update.BookUpdateScreen
@@ -35,7 +37,8 @@ fun MangaNavigation() {
         }
 
         composable(MangaScreens.SearchScreen.name){
-            SearchScreen(navController = navController)
+            val SearchViewModel = hiltViewModel<MangaSearchViewModel>()
+            SearchScreen(navController = navController, viewModel=SearchViewModel)
         }
 
         composable(MangaScreens.MangaStatsScreen.name){

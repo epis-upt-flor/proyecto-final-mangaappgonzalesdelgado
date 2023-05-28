@@ -1,7 +1,6 @@
 package com.example.proyecto_final_moviles_1.model
 
-data class Description(
-    val en: String,
+data class RelationshipX(
     val id: String,
-    //val pt-br: String
+    val type: String
 )

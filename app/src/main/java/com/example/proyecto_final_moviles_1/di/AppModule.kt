@@ -1,6 +1,7 @@
 package com.example.proyecto_final_moviles_1.di
 
 import com.example.proyecto_final_moviles_1.network.MangasApi
+import com.example.proyecto_final_moviles_1.respository.MangaRespository
 import com.example.proyecto_final_moviles_1.utils.Constants
 import dagger.Module
 import dagger.Provides
@@ -14,6 +15,11 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 
 object AppModule {
+
+
+    @Singleton
+    @Provides
+    fun provideBooksRepository(api: MangasApi) = MangaRespository(api)
 
     @Singleton
     @Provides
