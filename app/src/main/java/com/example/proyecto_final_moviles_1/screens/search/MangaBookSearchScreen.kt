@@ -1,8 +1,8 @@
 package com.example.proyecto_final_moviles_1.screens.search
 
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -33,18 +33,17 @@ import com.example.proyecto_final_moviles_1.components.MangaAppBar
 import com.example.proyecto_final_moviles_1.navigation.MangaScreens
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
-import androidx.compose.material.CircularProgressIndicator
+import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
-import com.example.proyecto_final_moviles_1.model.AttributesX
 import com.example.proyecto_final_moviles_1.model.Data
 import com.example.proyecto_final_moviles_1.model.Relationship
-import com.example.proyecto_final_moviles_1.model.cover
 
 
 @Composable
@@ -89,42 +88,68 @@ fun MangaList(navController: NavController, viewModel: MangaSearchViewModel = hi
 
 
     val listOfMangas = viewModel.list
-    //val listOfrelationship = viewModel1.list
+    if (viewModel.isloading){
+        Row(
+            modifier = Modifier.padding(end = 2.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
+        ){
+            LinearProgressIndicator()
+            Text(text = "Cargando...")
+        }
+    }else{
+        LazyColumn(
+            modifier = Modifier.fillMaxSize(),
+            contentPadding = PaddingValues(16.dp)
+        ) {
+
+            items(items = listOfMangas) { manga ->
+                MangaRow(manga, navController)
+            }
 
 
-//    val listOfMangas = listOf(
-//        MManga(id = "1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-//        MManga(id = "1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-//        MManga(id = "1", title = " DESPUES", authors = "Todos", notes = "nada"),
-//        MManga(id = "1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-//        MManga(id = "1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada")
-//    )
-
-    LazyColumn(
-        modifier = Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(16.dp)
-    ) {
-
-        items(items = listOfMangas) { manga ->
-            MangaRow(manga, navController)
         }
     }
 
 }
 
+
+
+
 @Composable
 fun MangaRow(
     manga: Data,
 
-
-
-
     navController: NavController
+
 ) {
+
+    val mangaId = manga.id
+    val tipo = manga.type
+    val estado = manga.attributes.state
+    val genero = manga.attributes.tags.map { tag ->
+        tag.attributes.name.en
+    }
+
+
+    val coverlist: List<Relationship> = manga.relationships
+    var coverId = String()
+
+    val coverArtIds = coverlist
+        .filter { it.type == "cover_art" } // Filtrar solo los elementos con tipo "cover_art"
+        .map { it.id } // Obtener el atributo id de cada elemento
+
+    for (coverArtId in coverArtIds) {
+        coverId = coverArtId
+    }
+
+
     Card(modifier = Modifier
-        .clickable { }
+        .clickable {
+            navController.navigate(MangaScreens.DetailsScreen.name + "/${manga.id}")
+        }
         .fillMaxWidth()
-        .height(100.dp)
+        .height(135.dp)
         .padding(3.dp),
         shape = RectangleShape,
         elevation = 7.dp) {
@@ -152,10 +177,24 @@ fun MangaRow(
 
                 Text(text = manga.attributes.title.en, overflow = TextOverflow.Ellipsis)
                 Text(
-                    text = "Tipo: ${manga.type}",
+                    text = "Tipo: ${tipo}",
                     overflow = TextOverflow.Clip,
+                    fontStyle = FontStyle.Italic,
                     style = MaterialTheme.typography.caption
                 )
+                Text(
+                    text = "Estado: ${estado}",
+                    overflow = TextOverflow.Clip,
+                    fontStyle = FontStyle.Italic,
+                    style = MaterialTheme.typography.caption
+                )
+                Text(
+                    text = "Genero: ${genero}",
+                    overflow = TextOverflow.Clip,
+                    fontStyle = FontStyle.Italic,
+                    style = MaterialTheme.typography.caption
+                )
+
                 //Todo:add more fields later!
             }
         }

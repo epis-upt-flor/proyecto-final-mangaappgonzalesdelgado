@@ -2,11 +2,15 @@ package com.example.proyecto_final_moviles_1.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.example.proyecto_final_moviles_1.model.Manga
 import com.example.proyecto_final_moviles_1.screens.MangaSplashScreen
-import com.example.proyecto_final_moviles_1.screens.details.BookDetailsScreen
+
+import com.example.proyecto_final_moviles_1.screens.details.MangaDetailsScreen
 import com.example.proyecto_final_moviles_1.screens.home.Home
 import com.example.proyecto_final_moviles_1.screens.login.LoginScreen
 import com.example.proyecto_final_moviles_1.screens.search.MangaSearchViewModel
@@ -32,8 +36,14 @@ fun MangaNavigation() {
             LoginScreen(navController = navController)
         }
 
-        composable(MangaScreens.DetailsScreen.name){
-            BookDetailsScreen(navController = navController)
+        val detailName = MangaScreens.DetailsScreen.name
+        composable("$detailName/{id}", arguments = listOf(navArgument("id"){
+            type = NavType.StringType
+        })){backStackEntry ->
+            backStackEntry.arguments?.getString("id").let {
+
+                MangaDetailsScreen(navController = navController,id = it.toString())
+            }
         }
 
         composable(MangaScreens.SearchScreen.name){

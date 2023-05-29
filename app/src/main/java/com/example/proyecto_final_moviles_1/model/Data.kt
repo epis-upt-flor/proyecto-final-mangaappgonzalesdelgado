@@ -5,4 +5,5 @@ data class Data(
     val id: String,
     val relationships: List<Relationship>,
     val type: String
+
 )
