@@ -7,6 +7,7 @@ import com.example.proyecto_final_moviles_1.di.AppModule.provideMangaApi
 import com.example.proyecto_final_moviles_1.model.Data
 import com.example.proyecto_final_moviles_1.model.DataX
 import com.example.proyecto_final_moviles_1.model.Manga
+import com.example.proyecto_final_moviles_1.model.MangaId
 import com.example.proyecto_final_moviles_1.network.MangasApi
 import com.google.api.ResourceProto.resource
 import retrofit2.Retrofit
@@ -30,12 +31,7 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
 
 
     }
-
-
-
-
-
-    suspend fun getMangaInfo(id: String): Resource<Data>{
+    suspend fun getMangaInfo(id: String): Resource<MangaId>{
         val response = try {
             Resource.Loading(data =true)
             api.getMangaId(id)

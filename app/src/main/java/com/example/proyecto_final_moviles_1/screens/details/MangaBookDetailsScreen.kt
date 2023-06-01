@@ -1,6 +1,7 @@
 package com.example.proyecto_final_moviles_1.screens.details
 
 import android.annotation.SuppressLint
+import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -36,8 +37,14 @@ import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.proyecto_final_moviles_1.components.MangaAppBar
 import com.example.proyecto_final_moviles_1.data.Resource
+import com.example.proyecto_final_moviles_1.di.AppModule
 import com.example.proyecto_final_moviles_1.model.Data
+import com.example.proyecto_final_moviles_1.model.MangaId
+import com.example.proyecto_final_moviles_1.model.Relationship
 import com.example.proyecto_final_moviles_1.navigation.MangaScreens
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
@@ -68,7 +75,7 @@ fun MangaDetailsScreen(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
-                val mangaInfo = produceState<Resource<Data>>(initialValue = Resource.Loading()) {
+                val mangaInfo = produceState<Resource<MangaId>>(initialValue = Resource.Loading()) {
                     value = viewModel.getMangaInfo(id)
                 }.value
 
@@ -92,18 +99,56 @@ fun MangaDetailsScreen(
 }
 
 @Composable
-fun ShowMangaDetails(mangaInfo: Resource<Data>, navController: NavController) {
-    val mangaData = mangaInfo.data?.attributes
-    val GmangaId = mangaInfo.data?.id
-    val imageUrl =
-        "https://mangadex.org/covers/b7d069cb-4ab9-4c21-a20b-38f7c269be4e/fe93f5cc-32a3-4bf1-8dba-b7aed939a119.jpg"
+fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController) {
+    val mangaData = mangaInfo.data?.data?.attributes
+    val GmangaId = mangaInfo.data?.data?.id
+    val title = mangaInfo.data?.data?.attributes?.title
+
+    val coverlist: List<Relationship> = mangaInfo.data?.data!!.relationships
+    var coverId = String()
+
+
+    val coverArtIds = coverlist
+        .filter { it.type == "cover_art" } // Filtrar solo los elementos con tipo "cover_art"
+        .map { it.id } // Obtener el atributo id de cada elemento
+
+    for (coverArtId in coverArtIds) {
+        coverId = coverArtId
+    }
+
+
+    suspend fun obtenerImageFile(coverId: String): String {
+        val retrofit = AppModule.provideMangaApi()
+        val conect = retrofit.getAllCover(coverId)
+        return conect.data.attributes.fileName
+    }
+
+    val miVariableExterior = remember { mutableStateOf("") }
+
+    // Llamada a la función suspendida dentro de un efecto de composición LaunchedEffect
+    LaunchedEffect(key1 = coverId) {
+        miVariableExterior.value = obtenerImageFile(coverId)
+        Log.d("imagen", "El valor de myVariable es: $miVariableExterior")
+    }
+
+
+    val imageUrl = remember { mutableStateOf("") }
+
+    LaunchedEffect(key1 = coverId) {
+        val result = obtenerImageFile(coverId)
+        miVariableExterior.value = result
+        imageUrl.value = "https://mangadex.org/covers/${GmangaId}/${miVariableExterior.value}"
+
+
+    }
+
 
     Card(
         modifier = Modifier.padding(34.dp),
         shape = CircleShape, elevation = 4.dp
     ) {
         Image(
-            painter = rememberImagePainter(data = imageUrl),
+            painter = rememberImagePainter(data = imageUrl.value),
             contentDescription = "Manga Image",
             modifier = Modifier
                 .width(90.dp)
@@ -114,7 +159,7 @@ fun ShowMangaDetails(mangaInfo: Resource<Data>, navController: NavController) {
 
     }
     Text(
-        text = GmangaId.toString(),
+        text = title.toString(),
         style = MaterialTheme.typography.h6,
         overflow = TextOverflow.Ellipsis,
         maxLines = 19
@@ -124,24 +169,26 @@ fun ShowMangaDetails(mangaInfo: Resource<Data>, navController: NavController) {
 
     Spacer(modifier = Modifier.height(5.dp))
 
-//    val cleanDescription = HtmlCompat.fromHtml(
-//        mangaData!!.description.toString(),
-//        HtmlCompat.FROM_HTML_MODE_LEGACY
-//    ).toString()
+    val cleanDescription = HtmlCompat.fromHtml(
+        mangaData!!.description.toString(),
+        HtmlCompat.FROM_HTML_MODE_LEGACY
+    ).toString()
 
-//    val localDims = LocalContext.current.resources.displayMetrics
-//    Surface(
-//        modifier = Modifier
-//            .height(localDims.heightPixels.dp.times(0.09f))
-//            .padding(4.dp), shape = RectangleShape, border = BorderStroke(1.dp, Color.DarkGray)
-//    )
-//    {
-//        LazyColumn(modifier = Modifier.padding(3.dp)) {
-//            item {
-//                Text(text = mangaData!!.description.toString())
-//            }
-//        }
-//
-//    }
+    val localDims = LocalContext.current.resources.displayMetrics
+    Surface(
+        modifier = Modifier
+            .height(localDims.heightPixels.dp.times(0.09f))
+            .padding(4.dp), shape = RectangleShape, border = BorderStroke(1.dp, Color.DarkGray)
+    )
+    {
+        LazyColumn(modifier = Modifier.padding(3.dp)) {
+            item {
+                Text(text = mangaData!!.description.toString())
+            }
+        }
+
+    }
 
 }
+
+

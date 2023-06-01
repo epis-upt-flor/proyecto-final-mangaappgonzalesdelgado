@@ -1,5 +1,6 @@
 package com.example.proyecto_final_moviles_1.screens.search
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -36,21 +37,30 @@ import androidx.compose.material.Card
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
+import com.example.proyecto_final_moviles_1.di.AppModule
+import com.example.proyecto_final_moviles_1.model.CoverId
 import com.example.proyecto_final_moviles_1.model.Data
 import com.example.proyecto_final_moviles_1.model.Relationship
+import com.example.proyecto_final_moviles_1.model.superData
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.withContext
 
 
 @Composable
 fun SearchScreen(
     navController: NavController,
     viewModel: MangaSearchViewModel = hiltViewModel()
-    //androidx.lifecycle.viewmodel.compose.viewModel()
+
 ) {
     Scaffold(topBar = {
         MangaAppBar(
@@ -59,7 +69,7 @@ fun SearchScreen(
             navController = navController,
             showProfile = false
         ) {
-            //navController.popBackStack()
+
             navController.navigate(MangaScreens.MangaHomeScreen.name)
         }
     }) {
@@ -114,8 +124,6 @@ fun MangaList(navController: NavController, viewModel: MangaSearchViewModel = hi
 }
 
 
-
-
 @Composable
 fun MangaRow(
     manga: Data,
@@ -142,7 +150,33 @@ fun MangaRow(
     for (coverArtId in coverArtIds) {
         coverId = coverArtId
     }
+    
+/////////////////////////////////////////////////////////////////////////////
+suspend fun obtenerImageFile(coverId: String): String {
+    val retrofit = AppModule.provideMangaApi()
+    val conect = retrofit.getAllCover(coverId)
+    return conect.data.attributes.fileName
+}
 
+// Llama a la función suspendida desde un contexto de coroutine
+    GlobalScope.launch(Dispatchers.Main) {
+        val miVariableExterior: String = obtenerImageFile(coverId)
+        // Aquí puedes utilizar miVariableExterior con el valor obtenido de la función suspendida
+
+    }
+
+
+    val miVariableExterior = remember { mutableStateOf("") }
+
+    // Llamada a la función suspendida dentro de un efecto de composición LaunchedEffect
+    LaunchedEffect(key1 = coverId) {
+        miVariableExterior.value = obtenerImageFile(coverId)
+
+    }
+
+    Log.d("IMAGEFIELMANGA", "El valor de myVariable es: $miVariableExterior")
+
+///////////////////////////////////////////////////////////////////
 
     Card(modifier = Modifier
         .clickable {
@@ -162,8 +196,9 @@ fun MangaRow(
 
 
 
-            val imageUrl=
-                "https://mangadex.org/covers/b7d069cb-4ab9-4c21-a20b-38f7c269be4e/fe93f5cc-32a3-4bf1-8dba-b7aed939a119.jpg"
+
+            val imageUrl = "https://mangadex.org/covers/$mangaId/${miVariableExterior.value}"
+
             Image(
                 painter = rememberImagePainter(data = imageUrl),
                 contentDescription = "Manga Image",

@@ -10,11 +10,11 @@ suspend fun main() {
     val retrofit = AppModule.provideMangaApi()
 
 
-    val mangaOrCoverId = "93894481-99a5-49c1-b93d-913fcc51b767" // Reemplaza con el ID real del manga o cover que deseas obtener
+    val mangaOrCoverId = String() // Reemplaza con el ID real del manga o cover que deseas obtener
 
     try {
         val data = retrofit.getAllCover(mangaOrCoverId)
-        val fileName = data.attributes.fileName
+        val fileName = data.data.attributes?.fileName?:"no hay nada"
         println("FileName: $fileName")
     } catch (e: Exception) {
         println("Error al consumir el API: ${e.message}")

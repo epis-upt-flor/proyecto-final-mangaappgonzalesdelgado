@@ -23,19 +23,14 @@ class MangaSearchViewModel @Inject constructor(private val repository: MangaResp
      var list: List<Data> by mutableStateOf(listOf())
      var isloading : Boolean by mutableStateOf(true)
 
-
-
     init {
         loadMangas()
     }
 
      fun loadMangas(){
-        searchManga("youjo senki")
+        searchManga("a")
 
     }
-
-
-
     fun searchManga(query: String){
         viewModelScope.launch(Dispatchers.Default){
 
