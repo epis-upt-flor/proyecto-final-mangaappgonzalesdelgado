@@ -8,6 +8,7 @@ import com.example.proyecto_final_moviles_1.model.Data
 import com.example.proyecto_final_moviles_1.model.DataX
 import com.example.proyecto_final_moviles_1.model.Manga
 import com.example.proyecto_final_moviles_1.model.MangaId
+import com.example.proyecto_final_moviles_1.modelChapter.ChapterVolume
 import com.example.proyecto_final_moviles_1.network.MangasApi
 import com.google.api.ResourceProto.resource
 import retrofit2.Retrofit
@@ -44,17 +45,18 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
     }
 
 
-//    suspend fun getFilename(mangaOrCoverId: String): Resource<DataX>{
-//        val response = try {
-//            Resource.Loading(data =true)
-//            api.getAllCover(mangaOrCoverId)
-//
-//        }catch(exception:Exception) {
-//            return Resource.Error(message = "An error occurred ${exception.message.toString()}")
-//        }
-//        Resource.Loading(data = false)
-//        return Resource.Success(data = response)
-//    }
+    suspend fun getTitles(id: String): Resource<ChapterVolume>{
+        val response = try {
+            Resource.Loading(data =true)
+            api.getAllChapters(id)
+
+        }catch(exception:Exception) {
+            return Resource.Error(message = "An error occurred ${exception.message.toString()}")
+        }
+        Resource.Loading(data = false)
+        return Resource.Success(data = response)
+    }
+
 
 
 

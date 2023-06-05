@@ -2,6 +2,7 @@ package com.example.proyecto_final_moviles_1.components
 
 import android.media.Image
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,6 +25,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -38,18 +40,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
+import com.example.proyecto_final_moviles_1.R
 import com.example.proyecto_final_moviles_1.model.MManga
 import com.example.proyecto_final_moviles_1.navigation.MangaScreens
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
 fun MangaLogo(modifier: Modifier = Modifier) {
-    Text(
-        text = "NerdCrew",
-        modifier = modifier.padding(bottom = 16.dp),
-        style = MaterialTheme.typography.h3,
-        color = Color.Red.copy(alpha = 0.5f)
+    Image(
+        painter = painterResource(R.drawable.logo),
+        contentDescription = "Logo",
+        modifier = Modifier.size(230.dp)
     )
+
 }
 
 
@@ -197,9 +200,11 @@ fun TitleSection(
 @Preview
 @Composable
 fun ListCard(
-    manga: MManga = MManga("asd", "hola", "Daniel y Jesus", "hola mundo"),
+
+    manga: MManga = MManga("asd", "hola"),
     onPressDetails: (String) -> Unit = {} // porq queremos pasar un evento clickeable y id y pues toda al info del manga
 ) {
+
 
     val context = LocalContext.current
     val resources = context.resources
@@ -265,7 +270,7 @@ fun ListCard(
             )
 
             Text(
-                text = manga.authors.toString(), modifier = Modifier.padding(4.dp),
+                text = manga.title.toString(), modifier = Modifier.padding(4.dp),
                 style = MaterialTheme.typography.caption
             )
 
@@ -327,6 +332,8 @@ fun MangaAppBar(
     onBackArrowClicked: () -> Unit = {}
 ) {
     TopAppBar(
+        //#8e4585
+        modifier = Modifier.background(Color(0xFF800080)),
         title = {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (showProfile) {
@@ -335,26 +342,25 @@ fun MangaAppBar(
                         contentDescription = "Icono del logo",
                         modifier = Modifier
                             .clip(RoundedCornerShape(12.dp))
-                            .scale(0.9f)
+                            .scale(0.9f),
+                        tint = Color.White // Cambiar el color del icono a blanco
                     )
-
                 }
                 if (icon != null) {
-                    Icon(imageVector = icon, contentDescription = "flecha de retorno",
-                        tint = Color.Red.copy(alpha = 0.7f),
-                        modifier = Modifier.clickable { onBackArrowClicked.invoke() })
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = "flecha de retorno",
+                        tint = Color.White,
+                        modifier = Modifier.clickable { onBackArrowClicked.invoke() }
+                    )
                 }
                 Spacer(modifier = Modifier.width(40.dp))
                 Text(
                     text = title,
-                    color = Color.Red.copy(alpha = 0.7f),
+                    color = Color.White.copy(alpha = 0.7f),
                     style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 20.sp)
                 )
-
-
             }
-
-
         },
         actions = {
             IconButton(onClick = {
@@ -362,25 +368,25 @@ fun MangaAppBar(
                     navController.navigate(MangaScreens.LoginScreen.name)
                 }
             }) {
-                if(showProfile) Row(){
-                    Icon(
-                        imageVector = Icons.Filled.Logout, // icono de cerrar sesion
-                        contentDescription = "Cerrar Sesión"
-                        //tint = Color.Green.copy(alpha = 0.4f)
-                    )
-                }else Box(){}
-                    
+                if (showProfile) {
+                    Row() {
+                        Icon(
+                            imageVector = Icons.Filled.Logout, // icono de cerrar sesion
+                            contentDescription = "Cerrar Sesión",
+                            tint = Color.White
+                        )
+                    }
+                } else {
 
-
-
-
+                }
             }
         },
         backgroundColor = Color.Transparent,
         elevation = 0.dp
     )
-
 }
+
+
 
 
 @Composable

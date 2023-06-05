@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.proyecto_final_moviles_1.model.Manga
 import com.example.proyecto_final_moviles_1.screens.MangaSplashScreen
+import com.example.proyecto_final_moviles_1.screens.chapters.MangaChapterScreen
 
 import com.example.proyecto_final_moviles_1.screens.details.MangaDetailsScreen
 import com.example.proyecto_final_moviles_1.screens.home.Home
@@ -59,6 +60,9 @@ fun MangaNavigation() {
             BookUpdateScreen(navController = navController)
         }
 
+        composable(MangaScreens.ChaptersScreen.name){
+            MangaChapterScreen(navController = navController)
+        }
 
     }
 }

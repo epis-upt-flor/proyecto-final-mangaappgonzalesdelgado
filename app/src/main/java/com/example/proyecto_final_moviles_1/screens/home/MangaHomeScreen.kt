@@ -50,11 +50,11 @@ fun Home(navController: NavController = NavController(LocalContext.current)) {
 fun HomeContent(navController: NavController) {
 
     val listOfMangas = listOf(
-        MManga(id ="1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = " DESPUES", authors = "Todos", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", authors = "Nosotros", notes = "nada")
+        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+        MManga(id ="1", title = " DESPUES", description = "Todos", notes = "nada"),
+        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada")
     )
 
     val email = FirebaseAuth.getInstance().currentUser?.email

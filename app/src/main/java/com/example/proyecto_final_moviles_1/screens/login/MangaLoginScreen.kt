@@ -12,6 +12,8 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Visibility
+import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
@@ -73,9 +75,9 @@ fun LoginScreen(navController: NavController,
         }
         Spacer(modifier = Modifier.height(15.dp))
 
-        Row(modifier = Modifier.padding(15.dp),
+        Row(modifier = Modifier.padding(15.dp).offset(y = 600.dp),
             horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
+
             ){
             val text = if (showLoginForm.value) "Registrarse" else "Iniciar Sesion"
             Text(text = "¿Nuevo Usuario?")
@@ -101,57 +103,99 @@ fun LoginScreen(navController: NavController,
 fun UserForm(
     loading: Boolean = false,
     isCreateAccount: Boolean = false,
-    onDone: (String, String) -> Unit = {email, pwd ->}
-){
+    onDone: (String, String) -> Unit = { email, pwd -> }
+) {
     val email = rememberSaveable { mutableStateOf("") }
     val password = rememberSaveable { mutableStateOf("") }
     val passwordVisibility = rememberSaveable { mutableStateOf(false) }
-    val passwordFocusRequest = FocusRequester.Default
-    val keyboarController = LocalSoftwareKeyboardController.current
+    val passwordFocusRequest = remember { FocusRequester() }
+    val keyboardController = LocalSoftwareKeyboardController.current
     val valid = remember(email.value, password.value) {
         email.value.trim().isNotEmpty() && password.value.trim().isNotEmpty()
     }
 
-    val modifier = Modifier
-        .height(250.dp)
-        .background(MaterialTheme.colors.background)
-        .verticalScroll(rememberScrollState())
-
-    Column(modifier, horizontalAlignment = Alignment.CenterHorizontally) {
-        if(isCreateAccount) Text(text = stringResource(id = R.string.create_acct)
-            , modifier = Modifier.padding(4.dp)) else Text("")
-
-        EmailInput(emailState = email, enabled = !loading, onAction = KeyboardActions{
-            passwordFocusRequest.requestFocus()  // sirve que cuando pongamos enter salte al sgte
-        })
-
-        PasswordInput(
-            modifier=Modifier.focusRequester(passwordFocusRequest),
-            passwordState = password,
-            labelId = "Password",
-            enabled = !loading, // sirve para cambiar el estado del boton
-            passwordVisibility = passwordVisibility,
-            onAction = KeyboardActions{
-                if(!valid) return@KeyboardActions
-                onDone(email.value.trim(), password.value.trim()) // esto se llama cuando se elija la opcion done
-            }
-
-        )
-        SubmitButton(
-            textId = if(isCreateAccount)"Crear Cuenta" else "Iniciar Sesión",
-            loading = loading,
-            validInputs = valid // se valida si los textfield estan llenos
-        ){
-            onDone(email.value.trim(), password.value.trim())
-            keyboarController?.hide()
+    Column(
+        modifier = Modifier
+            .background(MaterialTheme.colors.background)
+            .verticalScroll(rememberScrollState())
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        if (isCreateAccount) {
+            Text(
+                text = stringResource(id = R.string.create_acct),
+                style = MaterialTheme.typography.h5,
+                modifier = Modifier.padding(vertical = 16.dp)
+            )
         }
 
+        OutlinedTextField(
+            value = email.value,
+            onValueChange = { email.value = it },
+            label = { Text(text = "Email") },
+            enabled = !loading,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Next),
+            keyboardActions = KeyboardActions { passwordFocusRequest.requestFocus() },
+            modifier = Modifier.fillMaxWidth()
+        )
 
+        Spacer(modifier = Modifier.height(16.dp))
+
+        OutlinedTextField(
+            value = password.value,
+            onValueChange = { password.value = it },
+            label = { Text(text = "Contraseña") },
+            enabled = !loading,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
+            visualTransformation = if (passwordVisibility.value) VisualTransformation.None else PasswordVisualTransformation(),
+            keyboardActions = KeyboardActions {
+                if (valid) {
+                    onDone(email.value.trim(), password.value.trim())
+                }
+            },
+            trailingIcon = {
+                IconButton(
+                    onClick = { passwordVisibility.value = !passwordVisibility.value },
+                    modifier = Modifier.padding(4.dp)
+                ) {
+                    Icon(
+                        imageVector = if (passwordVisibility.value) Icons.Filled.Visibility else Icons.Filled.VisibilityOff,
+                        contentDescription = "Toggle Password Visibility"
+                    )
+                }
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .focusRequester(passwordFocusRequest)
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Button(
+            onClick = {
+                onDone(email.value.trim(), password.value.trim())
+                keyboardController?.hideSoftwareKeyboard()
+            },
+            enabled = valid,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            if (loading) {
+                CircularProgressIndicator(
+                    color = MaterialTheme.colors.onPrimary,
+                    modifier = Modifier.size(20.dp),
+                    strokeWidth = 2.dp
+                )
+            } else {
+                Text(
+                    text = if (isCreateAccount) "Crear cuenta" else "Iniciar sesión",
+                    style = MaterialTheme.typography.button,
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+            }
+        }
     }
-
-
-
 }
+
+
 
 @Composable
 fun SubmitButton(textId: String,

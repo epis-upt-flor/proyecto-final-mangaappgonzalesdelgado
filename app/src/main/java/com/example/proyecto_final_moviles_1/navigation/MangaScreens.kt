@@ -8,7 +8,8 @@ enum class MangaScreens {
     SearchScreen,
     DetailsScreen,
     UpdateScreen,
-    MangaStatsScreen;
+    MangaStatsScreen,
+    ChaptersScreen;
     companion object {
         fun fromRoute(route: String):MangaScreens
         = when(route?.substringBefore("/")){
@@ -19,6 +20,7 @@ enum class MangaScreens {
             DetailsScreen.name -> DetailsScreen
             UpdateScreen.name -> UpdateScreen
             MangaStatsScreen.name -> MangaStatsScreen
+            ChaptersScreen.name -> ChaptersScreen //ruta de imagnes de capitulos
             null -> MangaHomeScreen
             else -> throw IllegalArgumentException("Ruta $route desconocida")
         }

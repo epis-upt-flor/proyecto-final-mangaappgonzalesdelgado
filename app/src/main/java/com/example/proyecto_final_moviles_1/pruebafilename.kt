@@ -10,15 +10,38 @@ suspend fun main() {
     val retrofit = AppModule.provideMangaApi()
 
 
-    val mangaOrCoverId = String() // Reemplaza con el ID real del manga o cover que deseas obtener
+    val mangaOrCoverId = "d773c8be-8e82-4ff1-a4e9-46171395319b" // Reemplaza con el ID real del manga o cover que deseas obtener
 
     try {
-        val data = retrofit.getAllCover(mangaOrCoverId)
-        val fileName = data.data.attributes?.fileName?:"no hay nada"
-        println("FileName: $fileName")
+        val data = retrofit.getAllChapters(mangaOrCoverId)
+        val fileNames = data.data.map { it.attributes.title }
+        for (fileName in fileNames) {
+            println("FileName: $fileName")
+        }
     } catch (e: Exception) {
         println("Error al consumir el API: ${e.message}")
     }
 }
 
 
+
+//todos los titulos de los capitulos del un manga
+//try {
+//    val data = retrofit.getAllChapters(mangaOrCoverId)
+//    val fileNames = data.data.map { it.attributes.title }
+//    for (fileName in fileNames) {
+//        println("FileName: $fileName")
+//    }
+//} catch (e: Exception) {
+//    println("Error al consumir el API: ${e.message}")
+//}
+
+
+
+//try {
+//    val data = retrofit.getAllChapters(mangaOrCoverId)
+//    val fileName = data.data[0].attributes.title
+//    println("FileName: $fileName")
+//} catch (e: Exception) {
+//    println("Error al consumir el API: ${e.message}")
+//}
