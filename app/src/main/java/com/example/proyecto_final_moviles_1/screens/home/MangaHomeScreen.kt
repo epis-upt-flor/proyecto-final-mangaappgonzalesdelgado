@@ -17,6 +17,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.proyecto_final_moviles_1.components.FABContent
 import com.example.proyecto_final_moviles_1.components.ListCard
@@ -26,10 +28,13 @@ import com.example.proyecto_final_moviles_1.model.MManga
 import com.example.proyecto_final_moviles_1.navigation.MangaScreens
 import com.google.firebase.auth.FirebaseAuth
 
-@Preview
+
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun Home(navController: NavController = NavController(LocalContext.current)) {
+fun Home(
+    navController: NavController ,
+    viewModel: HomeScreenViewModel = hiltViewModel()
+) {
 
     Scaffold(topBar = {
         MangaAppBar(title = "NerdCrew", navController = navController)
@@ -41,21 +46,32 @@ fun Home(navController: NavController = NavController(LocalContext.current)) {
         }) {
 
         Surface(modifier = Modifier.fillMaxSize()) {
-            HomeContent(navController)
+            HomeContent(navController, viewModel)
         }
     }
 }
 
 @Composable
-fun HomeContent(navController: NavController) {
+fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
 
-    val listOfMangas = listOf(
-        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = " DESPUES", description = "Todos", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada")
-    )
+    var listOfMangas = emptyList<MManga>()
+    val currentUser = FirebaseAuth.getInstance().currentUser
+
+    if (!viewModel.data.value.data.isNullOrEmpty()){
+        listOfMangas = viewModel.data.value.data!!.toList().filter { mManga ->
+            mManga.userId == currentUser?.uid.toString()
+        }
+
+        Log.d("Mangas", "HomeContent:${listOfMangas}")
+    }
+
+//    val listOfMangas = listOf(
+//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+//        MManga(id ="1", title = " DESPUES", description = "Todos", notes = "nada"),
+//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
+//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada")
+//    )
 
     val email = FirebaseAuth.getInstance().currentUser?.email
     val currentUserName = if (!email.isNullOrEmpty())
@@ -82,7 +98,7 @@ fun HomeContent(navController: NavController) {
                     tint = MaterialTheme.colors.secondaryVariant
                 )
                 Text(
-                    text = currentUserName!!, // non null aserted call
+                    text = currentUserName!!,
                     modifier = Modifier.padding(2.dp),
                     style = MaterialTheme.typography.overline,
                     color = Color.Red,
@@ -94,7 +110,7 @@ fun HomeContent(navController: NavController) {
             }
         }
 
-        ReadingRightNowArea(mangas = listOf(), navController = navController)
+        ReadingRightNowArea(mangas = listOfMangas, navController = navController)
 
         TitleSection(label = "Lista de lectura")
 
@@ -110,8 +126,7 @@ fun HomeContent(navController: NavController) {
 @Composable
 fun BoolListArea(listOfMangas: List<MManga>, navController: NavController){
     HorizontalScrollableComponent(listOfMangas){
-        Log.d("TAG", "BoolListArea :$it")
-        //Todo: en click a la carta va a navegar a detalles
+        navController.navigate(MangaScreens.UpdateScreen.name + "/$it")
     }
 }
 
@@ -138,7 +153,7 @@ fun ReadingRightNowArea(
     mangas: List<MManga>,
     navController: NavController
 ) {
-    ListCard()
+//    ListCard(mangas)
 }
 
 

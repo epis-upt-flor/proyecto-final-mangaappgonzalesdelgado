@@ -197,18 +197,14 @@ fun TitleSection(
 
 }
 
-@Preview
-@Composable
-fun ListCard(
 
-    manga: MManga = MManga("asd", "hola"),
-    onPressDetails: (String) -> Unit = {} // porq queremos pasar un evento clickeable y id y pues toda al info del manga
+@Composable
+fun ListCard(manga: MManga ,onPressDetails: (String) -> Unit = {}
 ) {
 
 
     val context = LocalContext.current
     val resources = context.resources
-
 
     val displayMetrics =
         resources.displayMetrics // sacamos la info de lo que esta mostrando la app, en este caso los tamaños de los diferentes objetos
@@ -234,7 +230,7 @@ fun ListCard(
             Row(horizontalArrangement = Arrangement.Center) {
 
                 Image(
-                    painter = rememberImagePainter(data = "https://mangadex.org/covers/a77742b1-befd-49a4-bff5-1ad4e6b0ef7b/f6cd8dcd-ad53-47bc-9699-fb758c51d9ba.jpg"), // obviamente la imagen pero falta trabajar aqui topdavia
+                    painter = rememberImagePainter(data = manga.urlImage.toString()),
                     contentDescription = "Imagen de libro",
                     modifier = Modifier
                         .height(140.dp)
@@ -385,8 +381,6 @@ fun MangaAppBar(
         elevation = 0.dp
     )
 }
-
-
 
 
 @Composable

@@ -12,8 +12,8 @@ data class MManga(
     var  notes : String? = null,
     var rating: Double? = null,
 
-    @get:PropertyName("book_photo_url")
-    @set:PropertyName("book_photo_url")
+    @get:PropertyName("url_Image")
+    @set:PropertyName("url_Image")
     var urlImage: String? = null,
 
     @get:PropertyName("started_reading_at")
@@ -28,7 +28,7 @@ data class MManga(
     @set:PropertyName("user_id")
     var userId: String? = null,
 
-    @get:PropertyName("google_book_id")
-    @set:PropertyName("google_book_id")
+    @get:PropertyName("Manga_Id")
+    @set:PropertyName("Manga_Id")
     var MangaId: String? = null
 )
