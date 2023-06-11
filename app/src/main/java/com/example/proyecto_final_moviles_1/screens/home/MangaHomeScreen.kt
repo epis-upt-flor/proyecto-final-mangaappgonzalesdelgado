@@ -141,7 +141,7 @@ fun HorizontalScrollableComponent(listOfMangas: List<MManga>, onCardPressed: (St
 
         for(manga in listOfMangas) {
             ListCard(manga){
-                onCardPressed(it)
+                onCardPressed(manga.MangaId.toString())
             }
         }
     }

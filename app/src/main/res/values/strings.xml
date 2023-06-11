@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Proyecto_Final_Moviles_1</string>
+    <string name="sure">Estas seguro de eliminar este manga?</string>
+    <string name="action">Esta accion no es reversible</string>
     <string name="create_acct"> Por favor introduzca un correo y contraseña validos de almenos 6 carácteres</string>
 </resources>

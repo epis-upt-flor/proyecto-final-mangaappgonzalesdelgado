@@ -9,7 +9,7 @@ data class MManga(
     var title: String? = null,
     var gender: List<String>? = null,
     var description: String? = null,
-    var  notes : String? = null,
+    var notes : String? = null,
     var rating: Double? = null,
 
     @get:PropertyName("url_Image")
