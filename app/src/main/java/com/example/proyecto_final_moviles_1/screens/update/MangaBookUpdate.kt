@@ -156,10 +156,8 @@ fun ShowSimpleForm(manga: MManga, navController: NavController) {
     }
 
     SimpleForm(
-        defaultValue = if (manga.notes.toString().isEmpty()) manga.notes.toString()
-        else "No thoghts available."
-
-    ) { note ->
+        defaultValue = if (manga.notes.toString().isNotEmpty()) manga.notes.toString()
+        else "No thoghts available.") { note ->
         notesText.value = note
     }
 

@@ -54,7 +54,8 @@ fun MangaNavigation() {
         }
 
         composable(MangaScreens.MangaStatsScreen.name) {
-            StatsScreen(navController = navController)
+            val homeViewModel = hiltViewModel<HomeScreenViewModel>()
+            StatsScreen(navController = navController, viewModel = homeViewModel)
         }
 
 

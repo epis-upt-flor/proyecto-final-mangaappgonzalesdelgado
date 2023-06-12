@@ -1,6 +1,8 @@
 package com.example.proyecto_final_moviles_1.screens.login
 
 import android.util.Log
+import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,6 +24,8 @@ class LoginScreenViewModel: ViewModel() {
     private val _loading = MutableLiveData(false) // sirver para sostener data reactiva
     val loading: LiveData<Boolean> = _loading
 
+    val errorMessage: MutableState<String?> = mutableStateOf(null)
+
 
     // Login
     fun singInWithEmailAndPassword(email: String, password: String, home: ()-> Unit)
@@ -33,8 +37,10 @@ class LoginScreenViewModel: ViewModel() {
                         Log.d("FB", "singInWithEmailAndPassword yay: ${task.result.toString()}")
                         home()
                     }else {
-                        Log.d("FB","signInWithEmailAndPassword: ${task.result.toString()}")
+                        val error = ""
+                        errorMessage.value = error
                     }
+
                 }
         }catch(e: Exception){
             Log.d("FB","singInWithEmailAndPassword:${e.message}")

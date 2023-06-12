@@ -14,9 +14,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
@@ -32,7 +35,7 @@ import com.google.firebase.auth.FirebaseAuth
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun Home(
-    navController: NavController ,
+    navController: NavController,
     viewModel: HomeScreenViewModel = hiltViewModel()
 ) {
 
@@ -57,7 +60,7 @@ fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
     var listOfMangas = emptyList<MManga>()
     val currentUser = FirebaseAuth.getInstance().currentUser
 
-    if (!viewModel.data.value.data.isNullOrEmpty()){
+    if (!viewModel.data.value.data.isNullOrEmpty()) {
         listOfMangas = viewModel.data.value.data!!.toList().filter { mManga ->
             mManga.userId == currentUser?.uid.toString()
         }
@@ -110,50 +113,85 @@ fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
             }
         }
 
-        ReadingRightNowArea(mangas = listOfMangas, navController = navController)
+        ReadingRightNowArea(listOfMangas = listOfMangas, navController = navController)
 
         TitleSection(label = "Lista de lectura")
 
-        BoolListArea(listOfMangas = listOfMangas, navController = navController)
+        BookListArea(listOfMangas = listOfMangas, navController = navController)
 
     }
 
 }
 
 
-
-
 @Composable
-fun BoolListArea(listOfMangas: List<MManga>, navController: NavController){
-    HorizontalScrollableComponent(listOfMangas){
+fun BookListArea(listOfMangas: List<MManga>, navController: NavController) {
+
+    val addedMangas = listOfMangas.filter { mManga ->
+        mManga.startedReading == null && mManga.finishedReading == null
+    }
+
+
+    HorizontalScrollableComponent(addedMangas) {
         navController.navigate(MangaScreens.UpdateScreen.name + "/$it")
     }
 }
 
 @Composable
-fun HorizontalScrollableComponent(listOfMangas: List<MManga>, onCardPressed: (String) -> Unit) {
+fun HorizontalScrollableComponent(
+    listOfMangas: List<MManga>,
+    viewModel: HomeScreenViewModel = hiltViewModel(),
+    onCardPressed: (String) -> Unit
+) {
     val scrollState = rememberScrollState()
 
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .height(280.dp)
-        .horizontalScroll(scrollState)) {
-
-        for(manga in listOfMangas) {
-            ListCard(manga){
-                onCardPressed(manga.MangaId.toString())
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(280.dp)
+            .horizontalScroll(scrollState)
+    ) {
+        if (viewModel.data.value.loading == true) {
+            LinearProgressIndicator()
+        } else {
+            if (listOfMangas.isNullOrEmpty()) {
+                Surface(modifier = Modifier.padding(23.dp)) {
+                    Text(
+                        text = "No se encontraron mangas. Agrega un Manga",
+                        style = TextStyle(
+                            color = Color.Red.copy(alpha = 0.4f),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 14.sp
+                        )
+                    )
+                }
+            } else {
+                for (manga in listOfMangas) {
+                    ListCard(manga) {
+                        onCardPressed(manga.MangaId.toString())
+                    }
+                }
             }
         }
+
+
     }
 }
 
 
 @Composable
 fun ReadingRightNowArea(
-    mangas: List<MManga>,
+    listOfMangas: List<MManga>,
     navController: NavController
 ) {
-//    ListCard(mangas)
+
+    val readingNowList = listOfMangas.filter { mManga ->
+        mManga.startedReading != null && mManga.finishedReading == null
+    }
+
+    HorizontalScrollableComponent(readingNowList) {
+        navController.navigate(MangaScreens.UpdateScreen.name + "/$it")
+    }
 }
 
 

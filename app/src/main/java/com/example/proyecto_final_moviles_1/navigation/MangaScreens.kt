@@ -14,7 +14,7 @@ enum class MangaScreens {
         fun fromRoute(route: String):MangaScreens
         = when(route?.substringBefore("/")){
             SplashScreen.name ->SplashScreen
-            LoginScreen.name -> LoginScreen  // no se si esta bien ahorita
+            LoginScreen.name -> LoginScreen
             CreateAccountScreen.name -> CreateAccountScreen
             SearchScreen.name -> SearchScreen
             DetailsScreen.name -> DetailsScreen

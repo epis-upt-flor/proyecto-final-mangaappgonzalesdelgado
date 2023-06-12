@@ -264,7 +264,7 @@ fun ListCard(manga: MManga ,onPressDetails: (String) -> Unit = {}
                         modifier = Modifier.padding(bottom = 1.dp)
                     )
 
-                    MangaRating(score = 4.0)
+                    MangaRating(score = manga.rating!!)
 
 
                 }
@@ -285,12 +285,19 @@ fun ListCard(manga: MManga ,onPressDetails: (String) -> Unit = {}
 
         }
 
-        // este el el botoncito celeste fuera del column
+        val isStartedReading = remember {
+            mutableStateOf(false)
+        }
+
+
         Row(
             horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.Bottom
         ) {
-            RoundedButton(label = "Leyendo", radius = 70)
+
+            isStartedReading.value = manga.startedReading != null
+
+            RoundedButton(label = if(isStartedReading.value) "Leyendo" else "Sin leer", radius = 70)
 
         }
 
