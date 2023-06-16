@@ -31,6 +31,14 @@ fun MangaChapterScreen(navController: NavController, id: String, viewModel: Chap
 
 //    Log.d("numberChapter", "Number of chapters: ${numberChapter}")
 
+    val idchapter = chapters.data?.data?.map { chapter -> chapter.id }
+
+
+
+
+
+
+
 
     Scaffold(topBar = {
         MangaAppBar(
@@ -46,7 +54,7 @@ fun MangaChapterScreen(navController: NavController, id: String, viewModel: Chap
         LazyColumn() {
             items(numberTitle?.size ?: 0) { index ->
 
-                cardChapter(navController,numberChapter?.get(index), numberTitle?.get(index))
+                cardChapter(navController,numberChapter?.get(index), numberTitle?.get(index),idchapter?.get(index))
 
             }
         }

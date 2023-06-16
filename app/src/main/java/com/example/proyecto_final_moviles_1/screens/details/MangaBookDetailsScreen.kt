@@ -317,12 +317,6 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
 
 }
 
-// "/${manga.id}"
-
-
-
-
-
 
 fun saveFirestore(manga: MManga, navController: NavController) {
     val db = FirebaseFirestore.getInstance()

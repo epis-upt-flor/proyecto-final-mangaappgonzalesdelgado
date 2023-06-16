@@ -477,12 +477,12 @@ fun showToast(context: Context, msg: String) {
 
 
 @Composable
-fun cardChapter(navController: NavController,chapterNumber: String?, title: String? ) {
+fun cardChapter(navController: NavController,chapterNumber: String?, title: String? , id: String?) {
     Card(
         modifier = Modifier
             .padding(10.dp)
             .fillMaxWidth()
-            .clickable { navController.navigate(MangaScreens.ImageChaptersScreen.name)},
+            .clickable { navController.navigate(MangaScreens.ImageChaptersScreen.name+"/${id}")},
         shape = RoundedCornerShape(8.dp),
         elevation = 4.dp,
         backgroundColor = Color(0xFFCCE6FF) // Color celeste de fondo

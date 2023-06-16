@@ -9,6 +9,7 @@ import com.example.proyecto_final_moviles_1.model.DataX
 import com.example.proyecto_final_moviles_1.model.Manga
 import com.example.proyecto_final_moviles_1.model.MangaId
 import com.example.proyecto_final_moviles_1.modelChapter.ChapterVolume
+import com.example.proyecto_final_moviles_1.modelImage.ImageFile
 import com.example.proyecto_final_moviles_1.network.MangasApi
 import com.google.api.ResourceProto.resource
 import retrofit2.Retrofit
@@ -59,6 +60,17 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
 
 
 
+    suspend fun getImageFile(id: String): Resource<ImageFile> {
+        val  response = try {
+            Resource.Loading(data = true)
+            api.getAtHome(id)
+
+        }catch(exception: Exception){
+            return Resource.Error(message = "An error occurred ${exception.message.toString()}")
+        }
+        Resource.Loading(data = false)
+        return Resource.Success(data = response)
+    }
 
 
 }

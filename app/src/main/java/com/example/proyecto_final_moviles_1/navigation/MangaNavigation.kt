@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.proyecto_final_moviles_1.screens.MangaSplashScreen
+import com.example.proyecto_final_moviles_1.screens.chapters.ChapterViewModel
 import com.example.proyecto_final_moviles_1.screens.chapters.ImageScreen
 import com.example.proyecto_final_moviles_1.screens.chapters.MangaChapterScreen
 import com.example.proyecto_final_moviles_1.screens.details.DetailsViewModel
@@ -75,15 +76,22 @@ fun MangaNavigation() {
             type = NavType.StringType
         })) {backStackEntry ->
             backStackEntry.arguments?.getString("id").let{
-
-                MangaChapterScreen(navController = navController,id = it.toString())
+                val chapterViewModel = hiltViewModel<ChapterViewModel>()
+                MangaChapterScreen(navController = navController,id = it.toString(), viewModel = chapterViewModel)
             }
 
         }
 
 
-        composable(MangaScreens.ImageChaptersScreen.name) {
-            ImageScreen(navController = navController)
+        val imageList = MangaScreens.ImageChaptersScreen.name
+        composable("$imageList/{id}", arguments = listOf(navArgument("id"){
+            type = NavType.StringType
+        })) {backStackEntry ->
+            backStackEntry.arguments?.getString("id").let{
+
+                ImageScreen(navController = navController, id = it.toString())
+            }
+
         }
 
     }
