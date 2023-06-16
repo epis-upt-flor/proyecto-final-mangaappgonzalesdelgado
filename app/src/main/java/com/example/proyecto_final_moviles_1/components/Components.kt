@@ -1,7 +1,6 @@
 package com.example.proyecto_final_moviles_1.components
 
 import android.content.Context
-import android.media.Image
 import android.view.MotionEvent
 import android.widget.Toast
 import androidx.compose.animation.core.Spring
@@ -475,3 +474,37 @@ fun showToast(context: Context, msg: String) {
     Toast.makeText(context, msg, Toast.LENGTH_LONG)
         .show()
 }
+
+
+@Composable
+fun cardChapter(navController: NavController,chapterNumber: String?, title: String? ) {
+    Card(
+        modifier = Modifier
+            .padding(10.dp)
+            .fillMaxWidth()
+            .clickable { navController.navigate(MangaScreens.ImageChaptersScreen.name)},
+        shape = RoundedCornerShape(8.dp),
+        elevation = 4.dp,
+        backgroundColor = Color(0xFFCCE6FF) // Color celeste de fondo
+    ) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "Chapter $chapterNumber",
+                style = MaterialTheme.typography.h6,
+                modifier = Modifier.weight(1f)
+            )
+            Spacer(modifier = Modifier.width(16.dp))
+            if (title != null) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.body2,
+                    modifier = Modifier.weight(2f)
+                )
+            }
+        }
+    }
+}
+

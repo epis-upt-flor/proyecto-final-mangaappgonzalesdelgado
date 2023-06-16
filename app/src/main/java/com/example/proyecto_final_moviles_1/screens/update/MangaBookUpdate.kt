@@ -280,9 +280,17 @@ fun ShowSimpleForm(manga: MManga, navController: NavController) {
 
             openDialog.value = true
         }
+
+
     }
+    Spacer(modifier = Modifier.height(45.dp))
 
-
+    Row {
+        RoundedButton(label = "Capitulos"){
+            navController.navigate(MangaScreens.ChaptersScreen.name+ "/${manga.MangaId}")
+        }
+    }
+// "/${manga.id}"
 }
 
 

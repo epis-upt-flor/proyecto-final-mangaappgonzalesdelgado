@@ -304,7 +304,23 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
         }
 
     }
+
+    Spacer(modifier = Modifier.height(45.dp))
+
+    //boton de lista de capitulos
+
+    Row {
+        RoundedButton(label = "Capitulos"){
+            navController.navigate(MangaScreens.ChaptersScreen.name + "/${GmangaId}")
+        }
+    }
+
 }
+
+// "/${manga.id}"
+
+
+
 
 
 

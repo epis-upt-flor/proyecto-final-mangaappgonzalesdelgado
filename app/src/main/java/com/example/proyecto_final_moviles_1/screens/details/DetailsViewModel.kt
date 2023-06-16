@@ -21,9 +21,5 @@ class DetailsViewModel @Inject constructor(private val repository: MangaResposit
         return repository.getMangaInfo(id)
     }
 
-    suspend fun getTitles(id: String):Resource<ChapterVolume>{
-        return repository.getTitles(id)
-    }
-
 
 }
