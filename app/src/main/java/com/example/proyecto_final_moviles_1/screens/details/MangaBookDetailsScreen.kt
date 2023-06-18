@@ -8,6 +8,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -16,8 +17,11 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.MaterialTheme
@@ -177,9 +181,6 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
 //---------------------------------------------------------------------------------------
 
 
-
-
-
     Box(modifier = Modifier.padding(34.dp)) {
         Card(
             modifier = Modifier
@@ -241,7 +242,7 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
     var showFullDescription by remember { mutableStateOf(false) }
     val expandedHeight = animateDpAsState(
         if (showFullDescription && cleanDescription.length > 200) localDims.heightPixels.dp.times(
-            0.15f
+            0.08f
         ) else localDims.heightPixels.dp.times(0.06f)
     )
 
@@ -249,29 +250,37 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
         modifier = Modifier
             .fillMaxWidth()
             .height(expandedHeight.value)
+            .height(IntrinsicSize.Min)
             .padding(4.dp),
         shape = RoundedCornerShape(8.dp),
         elevation = 4.dp
     ) {
-        Box(
+        Column(
             modifier = Modifier
-                .padding(16.dp)
-                .background(Color.Transparent)
+                .verticalScroll(rememberScrollState())
+                .fillMaxSize()
         ) {
-            ClickableText(
-                text = if (showFullDescription && cleanDescription.length > 200) AnnotatedString(
-                    cleanDescription
-                ) else AnnotatedString(cleanDescription.take(200)),
-                style = TextStyle(fontWeight = FontWeight.Normal),
-                modifier = Modifier.fillMaxWidth(),
-                onClick = {
-                    if (cleanDescription.length > 200) {
-                        showFullDescription = !showFullDescription
+            Box(
+                modifier = Modifier
+                    .padding(16.dp)
+                    .background(Color.Transparent)
+            ) {
+                ClickableText(
+                    text = if (showFullDescription && cleanDescription.length > 200) AnnotatedString(
+                        cleanDescription
+                    ) else AnnotatedString(cleanDescription.take(200)),
+                    style = TextStyle(fontWeight = FontWeight.Normal),
+                    modifier = Modifier.fillMaxWidth(),
+                    onClick = {
+                        if (cleanDescription.length > 200) {
+                            showFullDescription = !showFullDescription
+                        }
                     }
-                }
-            )
+                )
+            }
         }
     }
+
 
 
     //Buttons
@@ -298,7 +307,7 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
 
 
         }
-        Spacer(modifier = Modifier.width(25.dp))
+        Spacer(modifier = Modifier.width(45.dp))
         RoundedButton(label = "Cancelar") {
             navController.popBackStack()
         }

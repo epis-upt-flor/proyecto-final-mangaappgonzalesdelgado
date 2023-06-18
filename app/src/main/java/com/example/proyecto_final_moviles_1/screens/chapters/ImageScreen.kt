@@ -1,40 +1,38 @@
 package com.example.proyecto_final_moviles_1.screens.chapters
 
 import android.annotation.SuppressLint
+import android.graphics.drawable.BitmapDrawable
 import android.util.Log
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.input.pointer.consumePositionChange
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import coil.ImageLoader
+import coil.compose.rememberImagePainter
+import coil.request.ImageRequest
 import com.example.proyecto_final_moviles_1.data.Resource
-import com.example.proyecto_final_moviles_1.modelChapter.ChapterVolume
 import com.example.proyecto_final_moviles_1.modelImage.ImageFile
-import com.google.accompanist.coil.rememberCoilPainter
-import kotlinx.coroutines.delay
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter", "CoroutineCreationDuringComposition")
 @Composable
@@ -68,14 +66,23 @@ fun ImageScreen(navController: NavHostController, id: String, viewModel: Chapter
                 itemsIndexed(files ?: emptyList()) { index, file ->
                     val imageUrl = "$baseUrl$hash$file"
 
+
                     Log.d("qhnqlnmsdql", "Url es : $imageUrl")
 
-                    Box(modifier = Modifier.fillMaxWidth().aspectRatio(1f)) {
+                    val imageRequest = ImageRequest.Builder(LocalContext.current)
+                        .data(imageUrl)
+                        .build()
+
+                    val isHorizontal = rememberImageOrientation(imageUrl)
+                    val contentScale = if (isHorizontal) ContentScale.FillWidth else ContentScale.FillHeight
+                    val modifier = if (isHorizontal) Modifier.fillMaxWidth() else Modifier.fillMaxSize().aspectRatio(0.6f)
+
+                    Box(modifier = modifier) {
                         Image(
-                            painter = rememberCoilPainter(request = imageUrl),
+                            painter = rememberImagePainter(request = imageRequest),
                             contentDescription = null,
                             modifier = Modifier.fillMaxSize(),
-                            contentScale = ContentScale.Fit
+                            contentScale = contentScale
                         )
                     }
                 }
@@ -83,6 +90,40 @@ fun ImageScreen(navController: NavHostController, id: String, viewModel: Chapter
         }
     )
 }
+
+@Composable
+
+private fun rememberImageOrientation(imageUrl: String): Boolean {
+    var isHorizontal by remember(imageUrl) { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    LaunchedEffect(imageUrl) {
+        scope.launch {
+            withContext(Dispatchers.IO) {
+                val imageLoader = ImageLoader(context)
+                val request = ImageRequest.Builder(context)
+                    .data(imageUrl)
+                    .build()
+                val result = imageLoader.execute(request)
+                val drawable = result.drawable
+
+                if (drawable is BitmapDrawable) {
+                    val bitmap = drawable.bitmap
+                    val width = bitmap.width
+                    val height = bitmap.height
+                    isHorizontal = width > height
+                }
+            }
+        }
+    }
+
+    return isHorizontal
+}
+
+
+
 
 
 
