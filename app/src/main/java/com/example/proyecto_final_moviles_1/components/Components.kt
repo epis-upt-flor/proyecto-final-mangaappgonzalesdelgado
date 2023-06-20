@@ -191,22 +191,15 @@ fun TitleSection(
     modifier: Modifier = Modifier,
     label: String
 ) {
-
-    Surface(modifier = modifier.padding(start = 5.dp, top = 1.dp)) {
-
-        Column {
-            Text(
-                text = label,
-                fontSize = 19.sp,
-                fontStyle = FontStyle.Normal,
-                textAlign = TextAlign.Left
-            )
-
-        }
-
-    }
-
+    Text(
+        text = label,
+        fontSize = 20.sp,
+        fontWeight = FontWeight.Bold,
+        color = MaterialTheme.colors.onBackground,
+        modifier = modifier.padding(start = 5.dp, top = 8.dp, bottom = 8.dp)
+    )
 }
+
 
 
 @Composable
@@ -270,17 +263,13 @@ fun ListCard(manga: MManga ,onPressDetails: (String) -> Unit = {}
             }
 
             Text(
-                text = manga.title.toString(), modifier = Modifier.padding(4.dp),
+                text = manga.title.toString(),
+                modifier = Modifier.padding(4.dp),
                 fontWeight = FontWeight.Bold,
                 maxLines = 2,
-                overflow = TextOverflow.Ellipsis
+                overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.h6
             )
-
-            Text(
-                text = manga.title.toString(), modifier = Modifier.padding(4.dp),
-                style = MaterialTheme.typography.caption
-            )
-
 
         }
 

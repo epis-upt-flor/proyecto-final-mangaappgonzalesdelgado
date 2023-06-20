@@ -257,6 +257,13 @@ fun MangaRow(
                     // ...
 
                     Text(
+                        text =  manga.attributes.title.en,
+                        overflow = TextOverflow.Clip,
+                        fontStyle = FontStyle.Italic,
+                        style = MaterialTheme.typography.subtitle1,
+                        color = Color.Gray
+                    )
+                    Text(
                         text = "Tipo: $tipo",
                         overflow = TextOverflow.Clip,
                         fontStyle = FontStyle.Italic,

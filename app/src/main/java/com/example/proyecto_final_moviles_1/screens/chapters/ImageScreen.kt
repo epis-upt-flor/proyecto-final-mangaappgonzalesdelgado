@@ -91,6 +91,9 @@ fun ImageScreen(navController: NavHostController, id: String, viewModel: Chapter
     )
 }
 
+
+
+
 @Composable
 
 private fun rememberImageOrientation(imageUrl: String): Boolean {

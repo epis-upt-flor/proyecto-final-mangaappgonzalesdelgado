@@ -13,15 +13,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.ViewModel
 import androidx.navigation.NavController
 import com.example.proyecto_final_moviles_1.components.FABContent
 import com.example.proyecto_final_moviles_1.components.ListCard
@@ -68,14 +65,6 @@ fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
         Log.d("Mangas", "HomeContent:${listOfMangas}")
     }
 
-//    val listOfMangas = listOf(
-//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-//        MManga(id ="1", title = " DESPUES", description = "Todos", notes = "nada"),
-//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada"),
-//        MManga(id ="1", title = "PARA DESPUES", description = "Nosotros", notes = "nada")
-//    )
-
     val email = FirebaseAuth.getInstance().currentUser?.email
     val currentUserName = if (!email.isNullOrEmpty())
         FirebaseAuth.getInstance().currentUser?.email?.split("@")?.get(0) else "N/A"
@@ -91,15 +80,19 @@ fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
             Spacer(modifier = Modifier.fillMaxWidth(0.7f))   // separacion
 
             Column {  // icono y nombre
-                Icon(imageVector = Icons.Filled.AccountCircle,
+                Icon(
+                    imageVector = Icons.Filled.AccountCircle,
                     contentDescription = "Perfil",
                     modifier = Modifier
                         .clickable {
-                            navController.navigate(MangaScreens.MangaStatsScreen.name)  // icono clickeable
+                            // Navegar a la pantalla de estadísticas del manga
+                            navController.navigate(MangaScreens.MangaStatsScreen.name)
                         }
-                        .size(45.dp),
-                    tint = MaterialTheme.colors.secondaryVariant
+                        .size(55.dp)
+                        .padding(8.dp), // Añadir un poco de espaciado al icono
+                    tint = MaterialTheme.colors.secondary // Usar el color secundario del tema
                 )
+
                 Text(
                     text = currentUserName!!,
                     modifier = Modifier.padding(2.dp),

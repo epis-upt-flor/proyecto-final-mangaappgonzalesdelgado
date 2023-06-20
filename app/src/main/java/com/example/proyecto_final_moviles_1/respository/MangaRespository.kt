@@ -34,6 +34,11 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
 
     }
     suspend fun getMangaInfo(id: String): Resource<MangaId>{
+
+        if (id.isBlank()) {
+            return Resource.Error(message = "Invalid manga ID")
+        }
+
         val response = try {
             Resource.Loading(data =true)
             api.getMangaId(id)
@@ -47,6 +52,11 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
 
 
     suspend fun getTitles(id: String): Resource<ChapterVolume>{
+
+        if (id.isBlank()) {
+            return Resource.Error(message = "Invalid ID")
+        }
+
         val response = try {
             Resource.Loading(data =true)
             api.getAllChapters(id)
@@ -61,6 +71,12 @@ class MangaRespository @Inject constructor(private val api: MangasApi) {
 
 
     suspend fun getImageFile(id: String): Resource<ImageFile> {
+
+        if (id.isBlank()) {
+            return Resource.Error(message = "Invalid ID")
+        }
+
+
         val  response = try {
             Resource.Loading(data = true)
             api.getAtHome(id)

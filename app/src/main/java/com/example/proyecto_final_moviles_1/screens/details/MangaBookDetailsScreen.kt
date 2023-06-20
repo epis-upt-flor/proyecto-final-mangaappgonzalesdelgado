@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -181,24 +182,31 @@ fun ShowMangaDetails(mangaInfo: Resource<MangaId>, navController: NavController,
 //---------------------------------------------------------------------------------------
 
 
-    Box(modifier = Modifier.padding(34.dp)) {
+    Box(
+        modifier = Modifier
+            .padding(15.dp)
+            .size(width = 300.dp, height = 220.dp) // Puedes ajustar el tamaño aquí
+    ) {
         Card(
             modifier = Modifier
-                .width(150.dp)
-                .height(150.dp)
+                .fillMaxSize()
                 .clip(shape = RoundedCornerShape(8.dp))
                 .background(MaterialTheme.colors.surface)
-                .padding(8.dp),
+                .padding(6.dp),
             elevation = 8.dp
         ) {
             Image(
                 painter = rememberImagePainter(data = imageUrl.value),
                 contentDescription = "Manga Image",
-                modifier = Modifier.fillMaxSize(),
-                contentScale = ContentScale.Crop
+                modifier = Modifier
+                    .fillMaxSize()
+                    .aspectRatio(1f),
+                contentScale = ContentScale.FillBounds
             )
         }
     }
+
+
 
 
     Text(

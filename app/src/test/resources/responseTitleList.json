@@ -1,0 +1,133 @@
+{
+  "result": "ok",
+  "response": "collection",
+  "data": [
+    {
+      "id": "c30e8966-cef8-46c6-bc31-f24f6827bf84",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "1",
+        "title": "The Sky in Norden",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T03:25:57+00:00",
+        "readableAt": "2018-01-26T03:25:57+00:00",
+        "createdAt": "2018-01-26T03:25:57+00:00",
+        "updatedAt": "2018-01-26T03:25:57+00:00",
+        "pages": 55,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "afb17c55-229e-484f-b26a-5959c85fd383",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "6fd96344-741d-4a6c-9ff0-0a177f459cbc",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "2",
+        "title": "Type 95 Elinium Operation Orb",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T03:29:58+00:00",
+        "readableAt": "2018-01-26T03:29:58+00:00",
+        "createdAt": "2018-01-26T03:29:58+00:00",
+        "updatedAt": "2018-01-26T03:29:58+00:00",
+        "pages": 56,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "afb17c55-229e-484f-b26a-5959c85fd383",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8ea939ec-02fb-4a4a-836c-ae09871c3354",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "3",
+        "title": "Die Wacht am Rhein I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T19:43:59+00:00",
+        "readableAt": "2018-01-26T19:43:59+00:00",
+        "createdAt": "2018-01-26T19:43:59+00:00",
+        "updatedAt": "2018-01-26T19:43:59+00:00",
+        "pages": 32,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "3fff27e2-28c8-4e9d-9a1b-6728f5a8a928",
+      "type": "chapter",
+      "attributes": {
+        "volume": "2",
+        "chapter": "4",
+        "title": "Die Wacht am Rhein II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T19:45:41+00:00",
+        "readableAt": "2018-01-26T19:45:41+00:00",
+        "createdAt": "2018-01-26T19:45:41+00:00",
+        "updatedAt": "2018-01-26T19:45:41+00:00",
+        "pages": 39,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    }
+  ],
+  "limit": 4,
+  "offset": 0,
+  "total": 65
+}

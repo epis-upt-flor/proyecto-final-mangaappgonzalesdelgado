@@ -1,0 +1,905 @@
+{
+  "result": "ok",
+  "response": "collection",
+  "data": [
+    {
+      "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+      "type": "manga",
+      "attributes": {
+        "title": {
+          "en": "Youjo Senki"
+        },
+        "altTitles": [
+          {
+            "de": "Die Militärischen Aufzeichnungen eines kleinen Mädchens"
+          },
+          {
+            "ru": "Военная хроника маленькой девочки"
+          },
+          {
+            "ru": "Колдунья в погонах"
+          },
+          {
+            "th": "บันทึกสงคราม ของยัยเผด็จการ"
+          },
+          {
+            "zh": "幼女战记"
+          },
+          {
+            "ja": "幼女戦記"
+          },
+          {
+            "ko": "유녀 전기"
+          },
+          {
+            "ar": "ملحمة تانيا الآثمة"
+          },
+          {
+            "fa": "حماسه تانیای شیطانی"
+          },
+          {
+            "fa": "داستانی تانیا ھەڵگەڕاوەکە (Sorani Kurdish)"
+          },
+          {
+            "zh-hk": "幼女戰記"
+          },
+          {
+            "ru": "Военный журнал маленькой девочки"
+          },
+          {
+            "uk": "Військова історія маленької дівчинки"
+          },
+          {
+            "id": "Kronik Militer Seorang Gadis Kecil"
+          },
+          {
+            "ms": "Kisah Tentera Seorang Gadis Kecil"
+          },
+          {
+            "ms": "Kisah Tanya yang Jahat"
+          },
+          {
+            "es": "Crónicas de una niña en guerra"
+          },
+          {
+            "es": "Diario de guerra"
+          },
+          {
+            "fr": "Tanya The Evil"
+          },
+          {
+            "it": "La saga di Tanya la malvagia"
+          },
+          {
+            "it": "Le cronache militari di una ragazzina"
+          },
+          {
+            "pt": "Crônicas Militares de uma Pequena Garota"
+          },
+          {
+            "vi": "Tanya Chiến Ký"
+          },
+          {
+            "tr": "Küçük Bir Kızın Askeri Günlükleri"
+          },
+          {
+            "en": "The Saga of Tanya the Evil"
+          },
+          {
+            "en": "A Little Girl's Military Record"
+          }
+        ],
+        "description": {
+          "en": "A young girl fights on the frontlines in war. She has blonde hair, blue eyes, and nearly transparent white skin \nas she flies through the air and mercilessly strikes down her enemies. \nHer name is Tanya Degurechaff and speaks with a young girl's lisp while she commands the army. \nTanya used to be one of Japan's elite office workers, but because of a wrathful god was reborn as a little girl. \nPrioritizing optimization and career advancement above all, she will become the most dangerous entity \namong the Imperial Army's sorcerers.  \n\nAdapted from Light Novel of same name.  \n\n---\n\n**Note:** Manga and Light Novel Licensed in English by Yen Press as \"The Saga of Tanya the Evil\"."
+        },
+        "isLocked": false,
+        "links": {
+          "al": "97216",
+          "ap": "youjo-senki-saga-of-tanya-the-evil",
+          "bw": "series/91701/list",
+          "kt": "37906",
+          "mu": "132515",
+          "nu": "youjo-senki",
+          "amz": "https://www.amazon.co.jp/gp/product/B07B4G8BD2",
+          "cdj": "http://www.cdjapan.co.jp/product/NEOBK-2022899",
+          "ebj": "https://ebookjapan.yahoo.co.jp/books/389146",
+          "mal": "98436",
+          "raw": "https://yenpress.com/series/the-saga-of-tanya-the-evil-manga"
+        },
+        "originalLanguage": "ja",
+        "lastVolume": "",
+        "lastChapter": "",
+        "publicationDemographic": "seinen",
+        "status": "ongoing",
+        "year": 2016,
+        "contentRating": "safe",
+        "tags": [
+          {
+            "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Reincarnation"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "2bd2e8d0-f146-434a-9b51-fc9ff2c5fe6a",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Genderswap"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "33771934-028e-4cb3-8744-691e866a923e",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Historical"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Action"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "3b60b75c-a2d7-4860-ab56-05f391bb889c",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Psychological"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "5fff9cde-849c-4d78-aab0-0d52b2ee1d25",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Survival"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Magic"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Military"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ace04997-f6bd-436e-b261-779182193d3d",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Isekai"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Gore"
+              },
+              "description": {},
+              "group": "content",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Drama"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Fantasy"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "f4122d1c-3b44-44d0-9936-ff7502c39ad3",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Adaptation"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2018-12-29T22:33:43+00:00",
+        "updatedAt": "2023-05-10T00:07:20+00:00",
+        "version": 56,
+        "availableTranslatedLanguages": [
+          "pt-br",
+          "ru",
+          "en",
+          "hu",
+          "vi",
+          "id",
+          "uk",
+          "es",
+          "pl"
+        ],
+        "latestUploadedChapter": "d352ecd0-faff-46dd-b40f-b1ba357775b8"
+      },
+      "relationships": [
+        {
+          "id": "1847e3ec-3d3a-4f07-8e95-9d5067f2aa55",
+          "type": "author"
+        },
+        {
+          "id": "fc2bcc6e-487a-4686-8e68-39b65b126b2c",
+          "type": "artist"
+        },
+        {
+          "id": "a33fcd61-7584-4517-ab6a-e1da434f8d11",
+          "type": "cover_art"
+        },
+        {
+          "id": "03ef2c56-b334-4317-9e01-bc070279442d",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "0736a46a-1a34-4411-b665-a1e45ebf54a9",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "119327ab-9b32-4841-9068-02264c15e118",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "1e4deefe-9eb8-4183-837a-f24002adb318",
+          "type": "manga",
+          "related": "spin_off"
+        },
+        {
+          "id": "25e26436-7eb7-4505-8711-6e014bb16fd7",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "27456a35-575c-4597-aa06-1fb7e1a02c7b",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "409ece89-5b77-439b-a896-d7ce4882e001",
+          "type": "manga",
+          "related": "doujinshi"
+        },
+        {
+          "id": "7944cc53-86e6-4135-898f-47c5c8d0647c",
+          "type": "manga",
+          "related": "doujinshi"
+        }
+      ]
+    },
+    {
+      "id": "1e4deefe-9eb8-4183-837a-f24002adb318",
+      "type": "manga",
+      "attributes": {
+        "title": {
+          "en": "Youjo Senki Restaurant"
+        },
+        "altTitles": [
+          {
+            "de": "Restaurant Die Kriegsgeschichte eines Kleinen Mädchen"
+          },
+          {
+            "ja-ro": "Youjo Senki Shokudou"
+          },
+          {
+            "ja": "幼女戦記食堂"
+          }
+        ],
+        "description": {
+          "en": "Tanya Degurechaff is a reincarnated Japanese salesman-turned-sociopathic child soldier, forced by the almighty Being X to fight an endless war.   \nBut soldiers need to eat, too. So join Tanya as she samples fine wartime meals."
+        },
+        "isLocked": false,
+        "links": {
+          "al": "103133",
+          "ap": "youjo-senki-restaurant",
+          "bw": "series/158917",
+          "kt": "40444",
+          "mu": "146830",
+          "amz": "https://www.amazon.co.jp/dp/B07C5JP888",
+          "ebj": "https://ebookjapan.yahoo.co.jp/books/454729/",
+          "mal": "114586"
+        },
+        "originalLanguage": "ja",
+        "lastVolume": "2",
+        "lastChapter": "14",
+        "publicationDemographic": "shounen",
+        "status": "completed",
+        "year": 2017,
+        "contentRating": "safe",
+        "tags": [
+          {
+            "id": "33771934-028e-4cb3-8744-691e866a923e",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Historical"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Comedy"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Fantasy"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "e5301a23-ebd9-49dd-a0cb-2add944c7fe9",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Slice of Life"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ea2bc92d-1c26-4930-9b7c-d5c0dc1b6869",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Cooking"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2019-03-08T08:10:59+00:00",
+        "updatedAt": "2023-05-05T13:39:50+00:00",
+        "version": 5,
+        "availableTranslatedLanguages": [
+          "vi",
+          "ru",
+          "en"
+        ],
+        "latestUploadedChapter": "01ffd72d-bdc5-4a88-b217-0967d6d6b6dd"
+      },
+      "relationships": [
+        {
+          "id": "08774bec-47fb-4ca4-aefb-ef6a2c2201c6",
+          "type": "author"
+        },
+        {
+          "id": "08774bec-47fb-4ca4-aefb-ef6a2c2201c6",
+          "type": "artist"
+        },
+        {
+          "id": "dd08126b-7960-4ff2-9505-5af06170e3cd",
+          "type": "cover_art"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga",
+          "related": "adapted_from"
+        }
+      ]
+    },
+    {
+      "id": "27456a35-575c-4597-aa06-1fb7e1a02c7b",
+      "type": "manga",
+      "attributes": {
+        "title": {
+          "en": "Youjo Senki - General Staff Headquarters Record of a Crying Little Girl Incident (Doujinshi)"
+        },
+        "altTitles": [
+          {
+            "hu": "Youjo Senki - Vezérkari parancsnokságon síró kislány esetének története (Doujinshi)"
+          },
+          {
+            "en": "The Saga Of Tanya The Evil - General Staff Headquarters Record of a Crying Little Girl Incident (Doujinshi)"
+          },
+          {
+            "ja": "参謀本部幼女号泣事件記録"
+          }
+        ],
+        "description": {},
+        "isLocked": false,
+        "links": {
+          "raw": "https://jackhaniwa.booth.pm/items/1574982"
+        },
+        "originalLanguage": "ja",
+        "lastVolume": "",
+        "lastChapter": "",
+        "publicationDemographic": null,
+        "status": "completed",
+        "year": 2019,
+        "contentRating": "suggestive",
+        "tags": [
+          {
+            "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Oneshot"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Reincarnation"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "33771934-028e-4cb3-8744-691e866a923e",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Historical"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "a1f53773-c69a-4ce5-8cab-fffcd90b1565",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Magic"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Military"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ace04997-f6bd-436e-b261-779182193d3d",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Isekai"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "b13b2a48-c720-44a9-9c77-39c9979373fb",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Doujinshi"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2022-11-05T23:25:38+00:00",
+        "updatedAt": "2023-03-17T01:31:11+00:00",
+        "version": 8,
+        "availableTranslatedLanguages": [
+          "hu",
+          "en"
+        ],
+        "latestUploadedChapter": "8476f740-0e15-4f64-a865-3052d03b12f9"
+      },
+      "relationships": [
+        {
+          "id": "16aa6003-0dfe-4d9d-a490-2116338de6b4",
+          "type": "author"
+        },
+        {
+          "id": "16aa6003-0dfe-4d9d-a490-2116338de6b4",
+          "type": "artist"
+        },
+        {
+          "id": "97f8b72d-f9c9-4ece-9883-09a8654108b4",
+          "type": "cover_art"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga",
+          "related": "based_on"
+        },
+        {
+          "id": "711a5cfa-3568-4f76-a8ed-fc95af8d191b",
+          "type": "creator"
+        }
+      ]
+    },
+    {
+      "id": "119327ab-9b32-4841-9068-02264c15e118",
+      "type": "manga",
+      "attributes": {
+        "title": {
+          "en": "A Little Girl Takes Up Senshado - Youjo Senki x Girls und Panzer (Doujinshi)"
+        },
+        "altTitles": [
+          {
+            "en": "(C96) [Tetsukazuno Ao. (Emilio)] Youjo, Senshadou Hajimerutte yo (Youjo Senki, Girls und Panzer)"
+          },
+          {
+            "en": "(C96) [手つかずの青。 (えみりお)] ようじょ、戦車道始めるってよ (幼女戦記、ガールズ&パンツァー)"
+          }
+        ],
+        "description": {
+          "en": "A heartwarming Youjo Senki and Girls und Panzer crossover story!"
+        },
+        "isLocked": false,
+        "links": {
+          "mu": "1lx1o2i"
+        },
+        "originalLanguage": "ja",
+        "lastVolume": "",
+        "lastChapter": "",
+        "publicationDemographic": null,
+        "status": "completed",
+        "year": 2021,
+        "contentRating": "safe",
+        "tags": [
+          {
+            "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Oneshot"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "0bc90acb-ccc1-44ca-a34a-b9f3a73259d0",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Reincarnation"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Comedy"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ace04997-f6bd-436e-b261-779182193d3d",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Isekai"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "b13b2a48-c720-44a9-9c77-39c9979373fb",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Doujinshi"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2021-02-07T09:05:47+00:00",
+        "updatedAt": "2022-11-04T22:29:55+00:00",
+        "version": 3,
+        "availableTranslatedLanguages": [
+          "ru",
+          "en"
+        ],
+        "latestUploadedChapter": "6a8c420e-c039-4f5f-aa07-9cde5fcb00cb"
+      },
+      "relationships": [
+        {
+          "id": "d74e39a6-ef46-46fa-8fde-95501fbc8261",
+          "type": "author"
+        },
+        {
+          "id": "b202f169-b9c0-4758-81a0-91ff9c7c0176",
+          "type": "artist"
+        },
+        {
+          "id": "7b93cb68-9e35-4f26-a832-7c8d3995c521",
+          "type": "cover_art"
+        },
+        {
+          "id": "944570ea-1b4e-4f80-ada6-8b30aa5b9a2c",
+          "type": "manga",
+          "related": "based_on"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga",
+          "related": "based_on"
+        }
+      ]
+    },
+    {
+      "id": "25e26436-7eb7-4505-8711-6e014bb16fd7",
+      "type": "manga",
+      "attributes": {
+        "title": {
+          "en": "Youjo Senki - Youjo Konki (Doujinshi)"
+        },
+        "altTitles": [
+          {
+            "en": "Marriage Chronicles of a Little Girl"
+          },
+          {
+            "ja": "幼女婚記 (幼女戦記)"
+          }
+        ],
+        "description": {
+          "en": "Enjoy Tanya von Degurechaff’s attempts at finding stability outside of the military through marriage."
+        },
+        "isLocked": false,
+        "links": {
+          "raw": "https://www.pixiv.net/member_illust.php?mode=medium&illust_id=61580926"
+        },
+        "originalLanguage": "ja",
+        "lastVolume": "",
+        "lastChapter": "2",
+        "publicationDemographic": null,
+        "status": "completed",
+        "year": 2017,
+        "contentRating": "safe",
+        "tags": [
+          {
+            "id": "423e2eae-a7a2-4a8b-ac03-a8351462d71d",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Romance"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Comedy"
+              },
+              "description": {},
+              "group": "genre",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "ac72833b-c4e9-4878-b9db-6c8a4a99444a",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Military"
+              },
+              "description": {},
+              "group": "theme",
+              "version": 1
+            },
+            "relationships": []
+          },
+          {
+            "id": "b13b2a48-c720-44a9-9c77-39c9979373fb",
+            "type": "tag",
+            "attributes": {
+              "name": {
+                "en": "Doujinshi"
+              },
+              "description": {},
+              "group": "format",
+              "version": 1
+            },
+            "relationships": []
+          }
+        ],
+        "state": "published",
+        "chapterNumbersResetOnNewVolume": false,
+        "createdAt": "2020-01-09T02:24:51+00:00",
+        "updatedAt": "2022-09-25T10:21:44+00:00",
+        "version": 6,
+        "availableTranslatedLanguages": [
+          "en"
+        ],
+        "latestUploadedChapter": "37fb9207-af73-4daa-9b41-fc3603cef783"
+      },
+      "relationships": [
+        {
+          "id": "4dd257b5-a2ee-48e1-9590-3e85b67c1957",
+          "type": "author"
+        },
+        {
+          "id": "4dd257b5-a2ee-48e1-9590-3e85b67c1957",
+          "type": "artist"
+        },
+        {
+          "id": "98162a5d-1901-4343-8a81-4531e754e688",
+          "type": "cover_art"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga",
+          "related": "based_on"
+        }
+      ]
+    }
+  ],
+  "limit": 10,
+  "offset": 0,
+  "total": 5
+}

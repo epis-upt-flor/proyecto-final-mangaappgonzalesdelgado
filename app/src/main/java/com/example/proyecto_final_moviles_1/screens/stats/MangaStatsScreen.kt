@@ -33,16 +33,22 @@ import androidx.compose.material.icons.sharp.Person
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.proyecto_final_moviles_1.components.MangaAppBar
 import com.example.proyecto_final_moviles_1.model.MManga
+import com.example.proyecto_final_moviles_1.navigation.MangaScreens
 import com.example.proyecto_final_moviles_1.screens.home.HomeScreenViewModel
 import com.example.proyecto_final_moviles_1.utils.formatDate
 import com.google.firebase.auth.FirebaseAuth
@@ -74,32 +80,50 @@ fun StatsScreen(navController: NavController, viewModel: HomeScreenViewModel = h
                 emptyList()
             }
             Column {
-                Row {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.padding(top = 8.dp, bottom = 8.dp, start = 16.dp, end = 16.dp)
+                ) {
                     Box(
                         modifier = Modifier
                             .size(45.dp)
-                            .padding(2.dp)
+                            .padding(end = 8.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Sharp.Person,
-                            contentDescription = "icon"
+                            contentDescription = "icon",
+                            tint = MaterialTheme.colors.primary,
+                            modifier = Modifier.size(34.dp),
+
                         )
                     }
 
                     Text(
-                        text = "Hi, ${
+                        text = "Hola, ${
                             currentUser?.email.toString()
                                 .split("@")[0].uppercase(Locale.getDefault())
-                        }"
+                        }",
+                        modifier = Modifier.padding(start = 8.dp),
+                        color = Color.Black,
+                        fontSize = 18.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontStyle = FontStyle.Italic
                     )
-
                 }
+
+
+
+
+
+
+
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(4.dp),
-                    shape = CircleShape,
-                    elevation = 5.dp
+                        .padding(16.dp),
+                    shape = MaterialTheme.shapes.medium,
+                    elevation = 5.dp,
+                    backgroundColor = MaterialTheme.colors.surface
                 ) {
                     val readMangaList: List<MManga> =
                         if (!viewModel.data.value.data.isNullOrEmpty()) {
@@ -113,16 +137,33 @@ fun StatsScreen(navController: NavController, viewModel: HomeScreenViewModel = h
                         (mManga.startedReading != null && mManga.finishedReading == null)
                     }
                     Column(
-                        modifier = Modifier.padding(start = 25.dp, top = 4.dp, bottom = 4.dp),
+                        modifier = Modifier.padding(16.dp),
+                        verticalArrangement = Arrangement.Center,
                         horizontalAlignment = Alignment.Start
                     ) {
-                        Text(text = "Tus estadisticas", style = MaterialTheme.typography.h5)
-                        Divider()
-                        Text(text = "Estas leyendo: ${readingMangas.size} mangas")
-                        Text(text = "Has leido: ${readMangaList.size} mangas")
-
+                        Text(
+                            text = "Tus estadísticas",
+                            style = MaterialTheme.typography.h5,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colors.primary
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Divider(color = MaterialTheme.colors.primary, thickness = 2.dp)
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Estás leyendo: ${readingMangas.size} mangas",
+                            style = MaterialTheme.typography.body1,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "Has leído: ${readMangaList.size} mangas",
+                            style = MaterialTheme.typography.body1,
+                            fontWeight = FontWeight.Bold
+                        )
                     }
                 }
+
 
                 if (viewModel.data.value.loading == true) {
                     LinearProgressIndicator()
@@ -143,7 +184,7 @@ fun StatsScreen(navController: NavController, viewModel: HomeScreenViewModel = h
                                 emptyList()
                             }
                         items(items = readMangas) { manga ->
-                            MangaRowStats(manga = manga)
+                            MangaRowStats(manga = manga,navController)
 
                         }
 
@@ -156,22 +197,25 @@ fun StatsScreen(navController: NavController, viewModel: HomeScreenViewModel = h
 }
 
 @Composable
-fun MangaRowStats(manga: MManga) {
-    Card(modifier = Modifier
-        .clickable {
-            //navController.navigate(ReaderScreens.DetailScreen.name + "/${book.id}")
-        }
-        .fillMaxWidth()
-        .height(100.dp)
-        .padding(3.dp),
-        shape = RectangleShape,
-        elevation = 7.dp) {
+fun MangaRowStats(manga: MManga, navController: NavController) {
+    val id = manga.MangaId
 
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(100.dp)
+            .padding(8.dp)
+            .clickable {navController.navigate(MangaScreens.DetailsScreen.name+ "/${id}")},
+
+
+        shape = MaterialTheme.shapes.medium,
+        elevation = 7.dp,
+        backgroundColor = MaterialTheme.colors.surface,
+    ) {
         Row(
-            modifier = Modifier.padding(5.dp),
-            verticalAlignment = Alignment.Top
+            modifier = Modifier.padding(8.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-
             val imageUrl: String = if (manga.urlImage.toString().isEmpty()) {
                 "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80"
             } else {
@@ -181,43 +225,50 @@ fun MangaRowStats(manga: MManga) {
                 painter = rememberImagePainter(data = imageUrl),
                 contentDescription = "Manga image",
                 modifier = Modifier
-                    .width(80.dp)
-                    .fillMaxHeight()
-                    .padding(end = 4.dp),
+                    .size(80.dp)
+                    .clip(MaterialTheme.shapes.medium)
+                    .padding(end = 8.dp),
+                contentScale = ContentScale.Crop,
             )
 
-            Column {
-                Row(horizontalArrangement = Arrangement.SpaceBetween) {
-                    Text(text = manga.title.toString(), overflow = TextOverflow.Ellipsis)
-                    if (manga.rating!! >= 4) {
-                        Spacer(modifier = Modifier.fillMaxWidth(0.8f))
-                        Icon(
-                            imageVector = Icons.Default.ThumbUp,
-                            contentDescription = "Pulgar hacia arriba",
-                            tint = Color.Green.copy(alpha = 0.5f)
-                        )
-                    } else {
-                        Box {}
-                    }
-                }
-
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = manga.title.toString(),
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    style = MaterialTheme.typography.h6,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colors.onSurface,
+                )
                 Text(
                     text = "Comenzó: ${formatDate(manga.startedReading!!)}",
-                    softWrap = true,
-                    overflow = TextOverflow.Clip,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    style = MaterialTheme.typography.caption,
+                    color = MaterialTheme.colors.onSurface,
                     fontStyle = FontStyle.Italic,
-                    style = MaterialTheme.typography.caption
+                    modifier = Modifier.padding(top = 2.dp)
                 )
-
                 Text(
                     text = "Terminó ${formatDate(manga.finishedReading!!)}",
-                    overflow = TextOverflow.Clip,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    style = MaterialTheme.typography.caption,
+                    color = MaterialTheme.colors.onSurface,
                     fontStyle = FontStyle.Italic,
-                    style = MaterialTheme.typography.caption
+                    modifier = Modifier.padding(top = 2.dp)
                 )
             }
 
+            if (manga.rating!! >= 4) {
+                Icon(
+                    imageVector = Icons.Default.ThumbUp,
+                    contentDescription = "Pulgar hacia arriba",
+                    tint = Color.Green.copy(alpha = 0.8f),
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
         }
-
     }
 }
+
