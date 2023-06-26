@@ -34,6 +34,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter", "CoroutineCreationDuringComposition")
 @Composable
 fun ImageScreen(navController: NavHostController, id: String, viewModel: ChapterViewModel = hiltViewModel()) {
@@ -75,7 +76,7 @@ fun ImageScreen(navController: NavHostController, id: String, viewModel: Chapter
 
                     val isHorizontal = rememberImageOrientation(imageUrl)
                     val contentScale = if (isHorizontal) ContentScale.FillWidth else ContentScale.FillHeight
-                    val modifier = if (isHorizontal) Modifier.fillMaxWidth() else Modifier.fillMaxSize().aspectRatio(0.6f)
+                    val modifier = if (isHorizontal) Modifier.fillMaxWidth() else Modifier.fillMaxSize().aspectRatio(0.63f)
 
                     Box(modifier = modifier) {
                         Image(

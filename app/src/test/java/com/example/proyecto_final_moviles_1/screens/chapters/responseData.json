@@ -1,0 +1,2040 @@
+{
+  "result": "ok",
+  "response": "collection",
+  "data": [
+    {
+      "id": "c30e8966-cef8-46c6-bc31-f24f6827bf84",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "1",
+        "title": "The Sky in Norden",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T03:25:57+00:00",
+        "readableAt": "2018-01-26T03:25:57+00:00",
+        "createdAt": "2018-01-26T03:25:57+00:00",
+        "updatedAt": "2018-01-26T03:25:57+00:00",
+        "pages": 55,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "afb17c55-229e-484f-b26a-5959c85fd383",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "6fd96344-741d-4a6c-9ff0-0a177f459cbc",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "2",
+        "title": "Type 95 Elinium Operation Orb",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T03:29:58+00:00",
+        "readableAt": "2018-01-26T03:29:58+00:00",
+        "createdAt": "2018-01-26T03:29:58+00:00",
+        "updatedAt": "2018-01-26T03:29:58+00:00",
+        "pages": 56,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "afb17c55-229e-484f-b26a-5959c85fd383",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8ea939ec-02fb-4a4a-836c-ae09871c3354",
+      "type": "chapter",
+      "attributes": {
+        "volume": "1",
+        "chapter": "3",
+        "title": "Die Wacht am Rhein I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T19:43:59+00:00",
+        "readableAt": "2018-01-26T19:43:59+00:00",
+        "createdAt": "2018-01-26T19:43:59+00:00",
+        "updatedAt": "2018-01-26T19:43:59+00:00",
+        "pages": 32,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "3fff27e2-28c8-4e9d-9a1b-6728f5a8a928",
+      "type": "chapter",
+      "attributes": {
+        "volume": "2",
+        "chapter": "4",
+        "title": "Die Wacht am Rhein II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T19:45:41+00:00",
+        "readableAt": "2018-01-26T19:45:41+00:00",
+        "createdAt": "2018-01-26T19:45:41+00:00",
+        "updatedAt": "2018-01-26T19:45:41+00:00",
+        "pages": 39,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "17f35b13-585b-4910-b901-e6b257b503bf",
+      "type": "chapter",
+      "attributes": {
+        "volume": "2",
+        "chapter": "5",
+        "title": "Die Wacht am Rhein III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T19:46:42+00:00",
+        "readableAt": "2018-01-26T19:46:42+00:00",
+        "createdAt": "2018-01-26T19:46:42+00:00",
+        "updatedAt": "2018-01-26T19:46:42+00:00",
+        "pages": 57,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "44ba1e4d-3908-48b4-bfae-28127d2c42c2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "2",
+        "chapter": "6",
+        "title": "War College I - College Selection Commision",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T21:51:31+00:00",
+        "readableAt": "2018-01-26T21:51:31+00:00",
+        "createdAt": "2018-01-26T21:51:31+00:00",
+        "updatedAt": "2018-01-26T21:51:31+00:00",
+        "pages": 40,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "cfcc2642-d3a1-4f97-b1ca-13ecbffd1ae2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "3",
+        "chapter": "7",
+        "title": "War College II - Total War Theory",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T21:56:24+00:00",
+        "readableAt": "2018-01-26T21:56:24+00:00",
+        "createdAt": "2018-01-26T21:56:24+00:00",
+        "updatedAt": "2018-01-26T21:56:24+00:00",
+        "pages": 32,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "2b671209-32a8-4bc2-bafb-de061bc0619a",
+      "type": "chapter",
+      "attributes": {
+        "volume": "3",
+        "chapter": "8",
+        "title": "War College III - Rapid Response Mage Wing Concept",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-26T21:58:21+00:00",
+        "readableAt": "2018-01-26T21:58:21+00:00",
+        "createdAt": "2018-01-26T21:58:21+00:00",
+        "updatedAt": "2018-01-26T21:58:21+00:00",
+        "pages": 73,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "466b225a-6c9a-4794-819a-a5a25a879ef7",
+      "type": "chapter",
+      "attributes": {
+        "volume": "3",
+        "chapter": "9",
+        "title": "Andrew Reports",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-27T21:39:16+00:00",
+        "readableAt": "2018-01-27T21:39:16+00:00",
+        "createdAt": "2018-01-27T21:39:16+00:00",
+        "updatedAt": "2018-01-27T21:39:16+00:00",
+        "pages": 32,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "ccbd2774-b314-455b-b781-274665763bae",
+      "type": "chapter",
+      "attributes": {
+        "volume": "4",
+        "chapter": "10",
+        "title": "The First Wing I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-27T21:41:27+00:00",
+        "readableAt": "2018-01-27T21:41:27+00:00",
+        "createdAt": "2018-01-27T21:41:27+00:00",
+        "updatedAt": "2018-01-27T21:41:27+00:00",
+        "pages": 38,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "392403ee-3732-4ef9-9e39-6a812e30857b",
+      "type": "chapter",
+      "attributes": {
+        "volume": "4",
+        "chapter": "11",
+        "title": "The First Wing II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-27T21:46:48+00:00",
+        "readableAt": "2018-01-27T21:46:48+00:00",
+        "createdAt": "2018-01-27T21:46:48+00:00",
+        "updatedAt": "2018-01-27T21:46:48+00:00",
+        "pages": 83,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "1a742db5-8377-4a54-ab4b-50f592af743b",
+      "type": "chapter",
+      "attributes": {
+        "volume": "5",
+        "chapter": "12",
+        "title": "The Dacian War I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-27T22:52:51+00:00",
+        "readableAt": "2018-01-27T22:52:51+00:00",
+        "createdAt": "2018-01-27T22:52:51+00:00",
+        "updatedAt": "2018-01-27T22:52:51+00:00",
+        "pages": 39,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "2d02b846-366a-446e-b2b6-f662d28a93f0",
+      "type": "chapter",
+      "attributes": {
+        "volume": "5",
+        "chapter": "13",
+        "title": "The Dacian War II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-27T22:53:59+00:00",
+        "readableAt": "2018-01-27T22:53:59+00:00",
+        "createdAt": "2018-01-27T22:53:59+00:00",
+        "updatedAt": "2018-01-27T22:53:59+00:00",
+        "pages": 67,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "ccc27c1b-d69b-43fc-af07-93babc3df6eb",
+      "type": "chapter",
+      "attributes": {
+        "volume": "5",
+        "chapter": "14",
+        "title": "Norden I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T00:40:51+00:00",
+        "readableAt": "2018-01-28T00:40:51+00:00",
+        "createdAt": "2018-01-28T00:40:51+00:00",
+        "updatedAt": "2018-01-28T00:40:51+00:00",
+        "pages": 35,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "d61a055d-be28-466d-a78b-c6b40049f44a",
+      "type": "chapter",
+      "attributes": {
+        "volume": "6",
+        "chapter": "15",
+        "title": "Norden II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T00:41:51+00:00",
+        "readableAt": "2018-01-28T00:41:51+00:00",
+        "createdAt": "2018-01-28T00:41:51+00:00",
+        "updatedAt": "2018-01-28T00:41:51+00:00",
+        "pages": 30,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "eb136527-a0ce-42dc-bcab-0fe6fea9f3cc",
+      "type": "chapter",
+      "attributes": {
+        "volume": "6",
+        "chapter": "16",
+        "title": "Norden III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T00:43:07+00:00",
+        "readableAt": "2018-01-28T00:43:07+00:00",
+        "createdAt": "2018-01-28T00:43:07+00:00",
+        "updatedAt": "2018-01-28T00:43:07+00:00",
+        "pages": 44,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "a9b71ca1-bd92-4263-99b6-ae7ff2a1ae16",
+      "type": "chapter",
+      "attributes": {
+        "volume": "6",
+        "chapter": "17",
+        "title": "Norden IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T00:45:14+00:00",
+        "readableAt": "2018-01-28T00:45:14+00:00",
+        "createdAt": "2018-01-28T00:45:14+00:00",
+        "updatedAt": "2018-01-28T00:45:14+00:00",
+        "pages": 23,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "6ed9babb-9040-4ce8-b128-4ca7e12085cd",
+      "type": "chapter",
+      "attributes": {
+        "volume": "6",
+        "chapter": "18",
+        "title": "Norden V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T00:46:06+00:00",
+        "readableAt": "2018-01-28T00:46:06+00:00",
+        "createdAt": "2018-01-28T00:46:06+00:00",
+        "updatedAt": "2018-01-28T00:46:06+00:00",
+        "pages": 44,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "2d0d8652-aa6b-432f-af04-8fa71453308c",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "b76e7fa7-a249-4079-b0ff-effb45b8bf2d",
+      "type": "chapter",
+      "attributes": {
+        "volume": "7",
+        "chapter": "19",
+        "title": "Norden VI",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T20:39:35+00:00",
+        "readableAt": "2018-01-28T20:39:35+00:00",
+        "createdAt": "2018-01-28T20:39:35+00:00",
+        "updatedAt": "2018-01-28T20:39:35+00:00",
+        "pages": 52,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "18bc701c-4441-4705-ad24-50e167cda04e",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "7dabe2c9-2cd9-4ada-91ba-9f520dbca773",
+      "type": "chapter",
+      "attributes": {
+        "volume": "7",
+        "chapter": "20",
+        "title": "Norden VII",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T20:42:51+00:00",
+        "readableAt": "2018-01-28T20:42:51+00:00",
+        "createdAt": "2018-01-28T20:42:51+00:00",
+        "updatedAt": "2018-01-28T20:42:51+00:00",
+        "pages": 52,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "18bc701c-4441-4705-ad24-50e167cda04e",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "9bd63dee-8332-498f-a3ed-edff8a97a84d",
+      "type": "chapter",
+      "attributes": {
+        "volume": "7",
+        "chapter": "21",
+        "title": "Norden VIII",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T20:48:28+00:00",
+        "readableAt": "2018-01-28T20:48:28+00:00",
+        "createdAt": "2018-01-28T20:48:28+00:00",
+        "updatedAt": "2018-01-28T20:48:28+00:00",
+        "pages": 39,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "18bc701c-4441-4705-ad24-50e167cda04e",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "fc3a0d5d-3874-4434-abba-6add034a5e6b",
+      "type": "chapter",
+      "attributes": {
+        "volume": "8",
+        "chapter": "22",
+        "title": "Norden IX",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T20:55:39+00:00",
+        "readableAt": "2018-01-28T20:55:39+00:00",
+        "createdAt": "2018-01-28T20:55:39+00:00",
+        "updatedAt": "2018-01-28T20:55:39+00:00",
+        "pages": 58,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "f377d60e-224f-4286-88f2-812590a35ee1",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "dc684fa3-4879-4c13-98f6-d0e17b3944cd",
+      "type": "chapter",
+      "attributes": {
+        "volume": "8",
+        "chapter": "23",
+        "title": "Devil in the Coast of Norden I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-25T20:41:11+00:00",
+        "readableAt": "2018-01-25T20:41:11+00:00",
+        "createdAt": "2018-01-25T20:41:11+00:00",
+        "updatedAt": "2018-01-25T20:41:11+00:00",
+        "pages": 40,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "f377d60e-224f-4286-88f2-812590a35ee1",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "72b0a6d0-486e-4292-af2f-6e0a75db75c3",
+      "type": "chapter",
+      "attributes": {
+        "volume": "8",
+        "chapter": "24",
+        "title": "Devil in the Coast of Norden II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-25T20:30:53+00:00",
+        "readableAt": "2018-01-25T20:30:53+00:00",
+        "createdAt": "2018-01-25T20:30:53+00:00",
+        "updatedAt": "2018-01-25T20:30:53+00:00",
+        "pages": 20,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "f377d60e-224f-4286-88f2-812590a35ee1",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8fbcb1fe-bd19-4c0e-9869-b4efdf3090b2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "9",
+        "chapter": "25",
+        "title": "Devil in the Coast of Norden III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-25T19:50:03+00:00",
+        "readableAt": "2018-01-25T19:50:03+00:00",
+        "createdAt": "2018-01-25T19:50:03+00:00",
+        "updatedAt": "2018-01-25T19:50:03+00:00",
+        "pages": 85,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "60ad71b3-5bbc-47a3-861b-290f8fe135d3",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "ec00d0bb-e641-40eb-ade0-c191934383c4",
+      "type": "chapter",
+      "attributes": {
+        "volume": "9",
+        "chapter": "26",
+        "title": "Devil in the Coast of Norden IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-01-28T07:17:35+00:00",
+        "readableAt": "2018-01-28T07:17:35+00:00",
+        "createdAt": "2018-01-28T07:17:35+00:00",
+        "updatedAt": "2018-01-28T07:17:35+00:00",
+        "pages": 94,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "670f97bb-9e68-4f78-b288-c4e37fb76d4c",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "5fac27e0-0c8f-4c55-81ef-bda9c3b641eb",
+      "type": "chapter",
+      "attributes": {
+        "volume": "10",
+        "chapter": "27",
+        "title": "Devil in the Coast of Norden V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-02-27T16:48:20+00:00",
+        "readableAt": "2018-02-27T16:48:20+00:00",
+        "createdAt": "2018-02-27T16:48:20+00:00",
+        "updatedAt": "2018-02-27T16:48:20+00:00",
+        "pages": 68,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "97b9cff4-7b84-4fed-929e-1a514be6ca20",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8b051636-ec4a-4d61-9dde-bc83acfe19ef",
+      "type": "chapter",
+      "attributes": {
+        "volume": "10",
+        "chapter": "28",
+        "title": "Devil in the Coast of Norden VI",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-03-24T13:22:45+00:00",
+        "readableAt": "2018-03-24T13:22:45+00:00",
+        "createdAt": "2018-03-24T13:22:45+00:00",
+        "updatedAt": "2018-03-24T13:22:45+00:00",
+        "pages": 17,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "97b9cff4-7b84-4fed-929e-1a514be6ca20",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "0f8d44a0-0269-4ed1-bda5-1689b66242d4",
+      "type": "chapter",
+      "attributes": {
+        "volume": "11",
+        "chapter": "29",
+        "title": "Devil of the Rhine I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-04-28T07:02:29+00:00",
+        "readableAt": "2018-04-28T07:02:29+00:00",
+        "createdAt": "2018-04-28T07:02:29+00:00",
+        "updatedAt": "2018-04-28T07:02:29+00:00",
+        "pages": 71,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "97b9cff4-7b84-4fed-929e-1a514be6ca20",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "1285bab0-bca3-4c0e-b077-a9a5d7c57261",
+      "type": "chapter",
+      "attributes": {
+        "volume": "11",
+        "chapter": "30",
+        "title": "Devil of the Rhine II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-06-10T14:37:53+00:00",
+        "readableAt": "2018-06-10T14:37:53+00:00",
+        "createdAt": "2018-06-10T14:37:53+00:00",
+        "updatedAt": "2018-06-10T14:37:53+00:00",
+        "pages": 57,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "97b9cff4-7b84-4fed-929e-1a514be6ca20",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "632f566a-9f41-4879-85da-c3752b14de75",
+      "type": "chapter",
+      "attributes": {
+        "volume": "12",
+        "chapter": "31",
+        "title": "Devil of the Rhine III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-07-24T04:43:48+00:00",
+        "readableAt": "2018-07-24T04:43:48+00:00",
+        "createdAt": "2018-07-24T04:43:48+00:00",
+        "updatedAt": "2018-07-24T04:43:48+00:00",
+        "pages": 69,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "97b9cff4-7b84-4fed-929e-1a514be6ca20",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "82efd532-75ec-45a0-8231-2b423db9f6ff",
+      "type": "chapter",
+      "attributes": {
+        "volume": "12",
+        "chapter": "32",
+        "title": "Devil of the Rhine IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-07-24T04:44:40+00:00",
+        "readableAt": "2018-07-24T04:44:40+00:00",
+        "createdAt": "2018-07-24T04:44:40+00:00",
+        "updatedAt": "2018-07-24T04:44:40+00:00",
+        "pages": 37,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "683d6044-a416-432c-9f45-c0952367650a",
+      "type": "chapter",
+      "attributes": {
+        "volume": "12",
+        "chapter": "33",
+        "title": "Devil of the Rhine V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-08-13T04:20:56+00:00",
+        "readableAt": "2018-08-13T04:20:56+00:00",
+        "createdAt": "2018-08-13T04:20:56+00:00",
+        "updatedAt": "2018-08-13T04:20:56+00:00",
+        "pages": 41,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "c52b8f35-15b5-41c0-b2b5-9acccc259c07",
+      "type": "chapter",
+      "attributes": {
+        "volume": "13",
+        "chapter": "34",
+        "title": "Devil of the Rhine VI",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-10-25T03:20:12+00:00",
+        "readableAt": "2018-10-25T03:20:12+00:00",
+        "createdAt": "2018-10-25T03:20:12+00:00",
+        "updatedAt": "2018-10-25T03:20:12+00:00",
+        "pages": 21,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8eee73d6-bab3-47da-aa1c-59d7fceedaad",
+      "type": "chapter",
+      "attributes": {
+        "volume": "13",
+        "chapter": "35",
+        "title": "Trial by Fire I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-12-25T00:17:47+00:00",
+        "readableAt": "2018-12-25T00:17:47+00:00",
+        "createdAt": "2018-12-25T00:17:47+00:00",
+        "updatedAt": "2018-12-25T00:17:47+00:00",
+        "pages": 61,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "0a4b3161-ee1a-460b-ba94-3f62e1ccc56f",
+      "type": "chapter",
+      "attributes": {
+        "volume": "13",
+        "chapter": "36",
+        "title": "Trial by Fire II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2018-12-29T04:20:48+00:00",
+        "readableAt": "2018-12-29T04:20:48+00:00",
+        "createdAt": "2018-12-29T04:20:48+00:00",
+        "updatedAt": "2018-12-29T04:20:48+00:00",
+        "pages": 19,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "39d7c542-e3ae-4ce5-b3f7-4b6686c261e1",
+      "type": "chapter",
+      "attributes": {
+        "volume": "13",
+        "chapter": "37",
+        "title": "Trial by Fire III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-01-05T18:54:23+00:00",
+        "readableAt": "2019-01-05T18:54:23+00:00",
+        "createdAt": "2019-01-05T18:54:23+00:00",
+        "updatedAt": "2019-01-05T18:54:23+00:00",
+        "pages": 37,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "ba4697cf-4168-4ff5-bd5c-3f4502530b4a",
+      "type": "chapter",
+      "attributes": {
+        "volume": "14",
+        "chapter": "38",
+        "title": "Trial by Fire IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-03-19T02:22:39+00:00",
+        "readableAt": "2019-03-19T02:22:39+00:00",
+        "createdAt": "2019-03-19T02:22:39+00:00",
+        "updatedAt": "2019-03-19T02:22:39+00:00",
+        "pages": 53,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "f07e267c-b44b-490a-ba11-90c4a9dd9640",
+      "type": "chapter",
+      "attributes": {
+        "volume": "14",
+        "chapter": "39",
+        "title": "Trial by Fire V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-06-15T01:31:58+00:00",
+        "readableAt": "2019-06-15T01:31:58+00:00",
+        "createdAt": "2019-06-15T01:31:58+00:00",
+        "updatedAt": "2019-06-15T01:31:58+00:00",
+        "pages": 70,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "32ca0f87-08f4-46c0-96b7-91fcba011e21",
+      "type": "chapter",
+      "attributes": {
+        "volume": "14",
+        "chapter": "40",
+        "title": "Andrew Report: The Massacre of Arene",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-06-25T22:44:16+00:00",
+        "readableAt": "2019-06-25T22:44:16+00:00",
+        "createdAt": "2019-06-25T22:44:16+00:00",
+        "updatedAt": "2019-06-25T22:44:16+00:00",
+        "pages": 25,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "134c76dd-e9e5-467b-b268-9dfd24057201",
+      "type": "chapter",
+      "attributes": {
+        "volume": "15",
+        "chapter": "41",
+        "title": "Preparation to Move Forward I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-08-25T23:03:48+00:00",
+        "readableAt": "2019-08-25T23:03:48+00:00",
+        "createdAt": "2019-08-25T23:03:48+00:00",
+        "updatedAt": "2019-08-25T23:03:48+00:00",
+        "pages": 65,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "4eecb16f-9159-490b-a55d-5b71a3da71db",
+      "type": "chapter",
+      "attributes": {
+        "volume": "15",
+        "chapter": "42",
+        "title": "Preparation to Move Forward II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-10-05T18:20:43+00:00",
+        "readableAt": "2019-10-05T18:20:43+00:00",
+        "createdAt": "2019-10-05T18:20:43+00:00",
+        "updatedAt": "2019-10-05T18:20:43+00:00",
+        "pages": 46,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "63db20c0-5091-441b-8859-36ef2c1520f6",
+      "type": "chapter",
+      "attributes": {
+        "volume": "15",
+        "chapter": "43",
+        "title": "Preparation to Move Forward III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-10-25T19:57:42+00:00",
+        "readableAt": "2019-10-25T19:57:42+00:00",
+        "createdAt": "2019-10-25T19:57:42+00:00",
+        "updatedAt": "2019-10-25T19:57:42+00:00",
+        "pages": 29,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "1509ead6-f9e9-45e5-9876-b48f5c20ecd8",
+      "type": "chapter",
+      "attributes": {
+        "volume": "16",
+        "chapter": "44",
+        "title": "Open Sesame I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-12-24T17:43:17+00:00",
+        "readableAt": "2019-12-24T17:43:17+00:00",
+        "createdAt": "2019-12-24T17:43:17+00:00",
+        "updatedAt": "2019-12-24T17:43:17+00:00",
+        "pages": 72,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "f865b38e-5c33-4df1-8417-2ae396c05cda",
+      "type": "chapter",
+      "attributes": {
+        "volume": "16",
+        "chapter": "45",
+        "title": "Open Sesame II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2019-12-24T17:45:43+00:00",
+        "readableAt": "2019-12-24T17:45:43+00:00",
+        "createdAt": "2019-12-24T17:45:43+00:00",
+        "updatedAt": "2019-12-24T17:45:43+00:00",
+        "pages": 53,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "214e33a6-5061-469b-a0b2-e2154e4c0e39",
+      "type": "chapter",
+      "attributes": {
+        "volume": "16",
+        "chapter": "46",
+        "title": "Open Sesame III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-02-22T01:52:35+00:00",
+        "readableAt": "2020-02-22T01:52:35+00:00",
+        "createdAt": "2020-02-22T01:52:35+00:00",
+        "updatedAt": "2020-02-22T01:52:35+00:00",
+        "pages": 29,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "52e32e00-5875-4652-9068-9454dabd01a2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "17",
+        "chapter": "47",
+        "title": "Records of the United Kingdom Army’s Bureau of War Archives",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-03-12T17:56:49+00:00",
+        "readableAt": "2020-03-12T17:56:49+00:00",
+        "createdAt": "2020-03-12T17:56:49+00:00",
+        "updatedAt": "2021-05-17T02:39:50+00:00",
+        "pages": 11,
+        "version": 2
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "4a5d2d42-9d1f-49c9-a99c-c733e2bc8387",
+      "type": "chapter",
+      "attributes": {
+        "volume": "17",
+        "chapter": "48",
+        "title": "Open Sesame IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-04-05T23:46:25+00:00",
+        "readableAt": "2020-04-05T23:46:25+00:00",
+        "createdAt": "2020-04-05T23:46:25+00:00",
+        "updatedAt": "2020-04-05T23:46:25+00:00",
+        "pages": 52,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "a592943c-83f8-4e56-9555-9388f381d8cc",
+      "type": "chapter",
+      "attributes": {
+        "volume": "17",
+        "chapter": "49",
+        "title": "Open Sesame V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-05-25T18:05:23+00:00",
+        "readableAt": "2020-05-25T18:05:23+00:00",
+        "createdAt": "2020-05-25T18:05:23+00:00",
+        "updatedAt": "2020-05-25T18:05:23+00:00",
+        "pages": 57,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "71763754-8217-4933-a94f-990a891dbb07",
+      "type": "chapter",
+      "attributes": {
+        "volume": "17",
+        "chapter": "50",
+        "title": "The Intervention Which Was Too Late I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-08-01T15:18:37+00:00",
+        "readableAt": "2020-08-01T15:18:37+00:00",
+        "createdAt": "2020-08-01T15:18:37+00:00",
+        "updatedAt": "2020-08-01T15:18:37+00:00",
+        "pages": 27,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "44a5ab46-9d20-455c-b5c2-4259de3ae10a",
+      "type": "chapter",
+      "attributes": {
+        "volume": "18",
+        "chapter": "51",
+        "title": "The Intervention Which Was Too Late II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-10-02T18:24:55+00:00",
+        "readableAt": "2020-10-02T18:24:55+00:00",
+        "createdAt": "2020-10-02T18:24:55+00:00",
+        "updatedAt": "2020-10-02T18:24:55+00:00",
+        "pages": 63,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "599ecb12-50b8-4086-9aac-d03740cf93f9",
+      "type": "chapter",
+      "attributes": {
+        "volume": "18",
+        "chapter": "52",
+        "title": "The Intervention Which Was Too Late III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-12-22T23:37:43+00:00",
+        "readableAt": "2020-12-22T23:37:43+00:00",
+        "createdAt": "2020-12-22T23:37:43+00:00",
+        "updatedAt": "2020-12-22T23:37:43+00:00",
+        "pages": 83,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "8b974860-3456-428b-942f-fb0f5b4063fe",
+      "type": "chapter",
+      "attributes": {
+        "volume": "19",
+        "chapter": "53",
+        "title": "The Intervention Which Was Too Late IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2020-12-25T18:26:39+00:00",
+        "readableAt": "2020-12-25T18:26:39+00:00",
+        "createdAt": "2020-12-25T18:26:39+00:00",
+        "updatedAt": "2020-12-25T18:26:39+00:00",
+        "pages": 21,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "79688fdf-b926-4862-90d3-9d77e8f555e8",
+      "type": "chapter",
+      "attributes": {
+        "volume": "19",
+        "chapter": "54",
+        "title": "The Intervention Which Was Too Late V",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2021-02-15T18:55:17+00:00",
+        "readableAt": "2021-02-15T18:55:17+00:00",
+        "createdAt": "2021-02-15T18:55:17+00:00",
+        "updatedAt": "2021-02-15T18:55:17+00:00",
+        "pages": 56,
+        "version": 1
+      },
+      "relationships": [
+        {
+          "id": "1b204336-6a5d-46ea-a134-746f161282fd",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "ff433ff5-efb2-4c03-a8cc-d084fed1c6a0",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "d03819ed-e285-4a71-86ff-80688a131fd8",
+      "type": "chapter",
+      "attributes": {
+        "volume": "19",
+        "chapter": "55",
+        "title": "Operation an Ark I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2021-12-14T03:09:46+00:00",
+        "readableAt": "2021-12-14T03:09:46+00:00",
+        "createdAt": "2021-12-14T03:09:46+00:00",
+        "updatedAt": "2021-12-15T07:00:46+00:00",
+        "pages": 45,
+        "version": 4
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "842ea0f0-9805-4f06-adc4-4692b8754859",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "59614e8c-505a-4fc9-8e3e-da8ae46ed9c4",
+      "type": "chapter",
+      "attributes": {
+        "volume": "19",
+        "chapter": "56",
+        "title": "Operation Ark II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-01-31T10:41:30+00:00",
+        "readableAt": "2022-01-31T10:41:30+00:00",
+        "createdAt": "2022-01-31T10:41:29+00:00",
+        "updatedAt": "2022-01-31T10:42:01+00:00",
+        "pages": 64,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "842ea0f0-9805-4f06-adc4-4692b8754859",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "f05a9fbd-f383-4474-8145-d1d6b80a5362",
+      "type": "chapter",
+      "attributes": {
+        "volume": "20",
+        "chapter": "57",
+        "title": "How to Use Victory I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-02-28T23:42:33+00:00",
+        "readableAt": "2022-02-28T23:42:33+00:00",
+        "createdAt": "2022-02-28T23:42:32+00:00",
+        "updatedAt": "2022-03-01T06:12:00+00:00",
+        "pages": 53,
+        "version": 6
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "91f4dd8f-4eb4-497b-b735-70d9e55b2282",
+      "type": "chapter",
+      "attributes": {
+        "volume": "20",
+        "chapter": "58",
+        "title": "How to Use Victory II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-04-03T03:13:32+00:00",
+        "readableAt": "2022-04-03T03:13:32+00:00",
+        "createdAt": "2022-04-03T03:13:32+00:00",
+        "updatedAt": "2022-04-03T03:14:08+00:00",
+        "pages": 37,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "6a509b98-e12f-4468-b861-2025c5b83b26",
+      "type": "chapter",
+      "attributes": {
+        "volume": "20",
+        "chapter": "59",
+        "title": "How to Use Victory III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-05-22T05:03:10+00:00",
+        "readableAt": "2022-05-22T05:03:10+00:00",
+        "createdAt": "2022-05-22T05:03:10+00:00",
+        "updatedAt": "2022-05-22T08:06:00+00:00",
+        "pages": 33,
+        "version": 4
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "f88573c7-08a2-40e4-b92d-883815feb3a2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "20",
+        "chapter": "60",
+        "title": "How to Use Victory IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-08-02T07:24:52+00:00",
+        "readableAt": "2022-08-02T07:24:52+00:00",
+        "createdAt": "2022-08-02T07:24:52+00:00",
+        "updatedAt": "2022-08-02T10:35:06+00:00",
+        "pages": 70,
+        "version": 4
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "842ea0f0-9805-4f06-adc4-4692b8754859",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "2d36c93f-d529-4091-a3ba-e074b614c2a2",
+      "type": "chapter",
+      "attributes": {
+        "volume": "21",
+        "chapter": "61",
+        "title": "The Southern Campaign I",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-10-02T04:29:27+00:00",
+        "readableAt": "2022-10-02T04:29:27+00:00",
+        "createdAt": "2022-10-02T04:29:26+00:00",
+        "updatedAt": "2022-10-02T04:31:25+00:00",
+        "pages": 57,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "842ea0f0-9805-4f06-adc4-4692b8754859",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "80b543cd-79c6-40bf-9038-30c49e132b91",
+      "type": "chapter",
+      "attributes": {
+        "volume": "21",
+        "chapter": "62",
+        "title": "The Southern Campaign II",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2022-12-17T08:41:50+00:00",
+        "readableAt": "2022-12-17T08:41:50+00:00",
+        "createdAt": "2022-12-17T08:41:50+00:00",
+        "updatedAt": "2022-12-17T08:45:01+00:00",
+        "pages": 76,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "d81b5c90-0029-4c41-8f4d-e274e0056dd8",
+      "type": "chapter",
+      "attributes": {
+        "volume": "22",
+        "chapter": "63",
+        "title": "The Southern Campaign III",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2023-03-21T07:29:57+00:00",
+        "readableAt": "2023-03-21T07:29:57+00:00",
+        "createdAt": "2023-03-21T07:29:57+00:00",
+        "updatedAt": "2023-03-21T07:31:51+00:00",
+        "pages": 58,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "babd63c0-0c9c-4ce0-995f-7dd565feb9ed",
+      "type": "chapter",
+      "attributes": {
+        "volume": "22",
+        "chapter": "63.5",
+        "title": null,
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2023-06-10T11:00:26+00:00",
+        "readableAt": "2023-06-10T11:00:26+00:00",
+        "createdAt": "2023-06-10T00:58:18+00:00",
+        "updatedAt": "2023-06-10T11:00:26+00:00",
+        "pages": 7,
+        "version": 3
+      },
+      "relationships": [
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "766a5a83-35a2-4b88-a0d4-ad1c81c44d89",
+          "type": "user"
+        }
+      ]
+    },
+    {
+      "id": "50bcefea-ca8d-4692-85d3-c8358ec9bfd9",
+      "type": "chapter",
+      "attributes": {
+        "volume": "22",
+        "chapter": "64",
+        "title": "The Southern Campaign IV",
+        "translatedLanguage": "en",
+        "externalUrl": null,
+        "publishAt": "2023-05-09T07:42:06+00:00",
+        "readableAt": "2023-05-09T07:42:06+00:00",
+        "createdAt": "2023-05-09T07:42:05+00:00",
+        "updatedAt": "2023-05-09T18:28:37+00:00",
+        "pages": 36,
+        "version": 4
+      },
+      "relationships": [
+        {
+          "id": "b25e068a-5363-4f1d-872b-eba5b0224ae9",
+          "type": "scanlation_group"
+        },
+        {
+          "id": "d773c8be-8e82-4ff1-a4e9-46171395319b",
+          "type": "manga"
+        },
+        {
+          "id": "1a352cc4-439e-4f67-8984-a1dfa9f8b2a9",
+          "type": "user"
+        }
+      ]
+    }
+  ],
+  "limit": 100,
+  "offset": 0,
+  "total": 65
+}

@@ -79,7 +79,7 @@ fun MangaDetailsScreen(
             showProfile = false,
             navController = navController
         ) {
-            navController.navigate(MangaScreens.SearchScreen.name)
+            navController.popBackStack()
         }
     }) {
         Surface(

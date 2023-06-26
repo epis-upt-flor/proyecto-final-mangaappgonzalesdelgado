@@ -63,6 +63,7 @@ fun HomeContent(navController: NavController, viewModel: HomeScreenViewModel) {
         }
 
         Log.d("Mangas", "HomeContent:${listOfMangas}")
+        Log.d("esto", "getAllMangasFromDatabase: ${viewModel.data.value.data?.toList().toString()}")
     }
 
     val email = FirebaseAuth.getInstance().currentUser?.email

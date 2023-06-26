@@ -17,7 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.nio.charset.StandardCharsets
 
 
-//simulador de manga dex
+
 class ExampleUnitTest {
    private val mockWebServer = MockWebServer()
 

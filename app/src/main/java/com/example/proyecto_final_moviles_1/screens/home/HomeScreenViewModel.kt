@@ -24,7 +24,7 @@ class HomeScreenViewModel @Inject constructor(private val repository: FireReposi
         getAllMangasFromDatabase()
     }
 
-    private fun getAllMangasFromDatabase() {
+    public fun getAllMangasFromDatabase() {
         viewModelScope.launch {
             data.value.loading = true
             data.value = repository.getAllMangasFromDatabase()

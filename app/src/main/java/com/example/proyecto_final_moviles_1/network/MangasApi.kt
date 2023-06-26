@@ -17,7 +17,7 @@ import javax.inject.Singleton
 interface MangasApi {
 
     //listar mangas
-    @GET("manga?limit=15")
+    @GET("manga?limit=30")
     suspend fun getAllMangas(@Query("title") query: String? = null): Manga
 
     //listar mangas por id

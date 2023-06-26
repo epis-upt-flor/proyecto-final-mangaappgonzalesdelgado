@@ -17,8 +17,13 @@ import javax.inject.Inject
 class DetailsViewModel @Inject constructor(private val repository: MangaRespository)
     : ViewModel()
 {
-    suspend fun getMangaInfo(id: String):Resource<MangaId>{
-        return repository.getMangaInfo(id)
+    suspend fun getMangaInfo(id: String): Resource<MangaId> {
+        try {
+            return repository.getMangaInfo(id)
+        } catch (e: Exception) {
+            // Manejo de la excepción aquí
+            return Resource.Error("Ocurrió un error al obtener la información del manga.")
+        }
     }
 
 
