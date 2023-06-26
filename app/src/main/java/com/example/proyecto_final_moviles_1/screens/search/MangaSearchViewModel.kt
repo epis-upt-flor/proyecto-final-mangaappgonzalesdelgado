@@ -28,7 +28,7 @@ class MangaSearchViewModel @Inject constructor(private val repository: MangaResp
     }
 
      fun loadMangas(){
-        searchManga("b")
+        searchManga("a")
 
     }
     fun searchManga(query: String){
